@@ -21,7 +21,6 @@ function loop(mar) {
 		$(".editorSec").on("swipeleft", function() {
 
 			var n = edSeA.indexOf(this);
-			alert("n");
 			$(this).css("margin-left", "-20vw");
 			var marginSwipe = $(edSeA[n]).css("margin-left");
 			loop(marginSwipe);
@@ -33,7 +32,6 @@ function loop(mar) {
 		$(".editorSec").on("swiperight", function() {
 
 			var n = edSeA.indexOf(this);
-			alert("worked");
 			$(this).css("margin-left", "0vw");
 			var marginSwipe = $(edSeA[n]).css("margin-left");
 			loop(marginSwipe);
