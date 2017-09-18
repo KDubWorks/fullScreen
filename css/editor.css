@@ -30,7 +30,8 @@ html, body {
 		height:auto;
 		position:absolute;
 		z-index:10000;
-		padding-bottom:5em;
+		border-top:2px solid #888888;
+		border-bottom:2px solid #888888;
 	}
 
 	.editorSec {
