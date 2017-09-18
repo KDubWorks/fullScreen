@@ -44,4 +44,6 @@ function loop(mar) {
 
 }
 
+loop(0);
+
 
