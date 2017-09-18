@@ -56,6 +56,8 @@ html, body {
 		width:100%;
 		height:4em;
 		overflow:hidden;
+		float:left;
+		margin-left:0em;
 		box-shadow:inset 0 0 0 1px #080808;
 	}
 
@@ -64,6 +66,22 @@ html, body {
 		font-size:15px;
 		font-weight:normal;
 		margin-top:25px;
+	}
+
+	.use {
+		width:4em;
+		height:4em;
+		background-color:#00B274;
+		box-shadow:inset 0 0 0 1px #080808;
+		float:left;
+	}
+
+	.learn {
+		width:4em;
+		height:4em;
+		background-color:#B22200;
+		box-shadow:inset 0 0 0 1px #080808;
+		float:left;
 	}
 
 	/*Selection Button*/

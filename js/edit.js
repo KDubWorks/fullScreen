@@ -9,7 +9,7 @@ for(var i = 0; i < editorSec.length; i++) {
 
 $(".editorSec").on("swipeleft", function() {
 
-	$(this).css("margin-left", "-20vw");
+	$(this).css("margin-left", "-8em");
 
 });
 
@@ -19,15 +19,3 @@ $(".editorSec").on("swiperight", function() {
 	$(this).css("margin-left", "0vw");
 
 });
-
-for(var i = 0; i < editorSec.length; i++) {
-
-	$(editorSec[i]).tap(function() {
-
-		var n = edSeA.indexOf(this);
-
-		alert(n);
-
-	});
-
-}
