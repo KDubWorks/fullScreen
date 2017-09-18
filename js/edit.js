@@ -1,6 +1,6 @@
 $(".editorSec").on("swipeleft", function() {
 
-	alert("Hello");
+	$(this).css("margin-left", "-20vw");
 
 });
 
