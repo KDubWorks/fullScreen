@@ -60,6 +60,26 @@ for(var i = 0; i < use.length; i++) {
 
 			$(tools[n]).css("display", "block");
 
+		} else if(n == 1) {
+
+			$(tools[n]).css("display", "block");
+
+		} else if(n == 2) {
+
+			$(tools[n]).css("display", "block");
+
+		} else if(n == 3) {
+
+			$(tools[n]).css("display", "block");
+
+		} else if(n == 4) {
+
+			$(tools[n]).css("display", "block");
+
+		} else if(n == 5) {
+
+			$(tools[n]).css("display", "block");
+
 		}
 
 	});
@@ -71,6 +91,26 @@ for(var i = 0; i < learn.length; i++) {
 	$(learn[i]).on("tap", function() {
 
 		var n = learnA.indexOf(this);
+
+
+	});
+
+}
+
+/*This will open the specific tools*/
+var sectools = $(".sectools");
+var sectoolsA = new Array();
+
+for(var i = 0; i < sectools.length; i++) {
+	sectoolsA[i] = sectools[i];
+}
+
+for(var i = 0; i < sectools.length; i++) {
+
+	$(sectools[i]).on("tap", function() {
+
+		var n = sectoolsA.indexOf(this);
+		$(sectools[n]).css("height", "auto");
 
 	});
 
