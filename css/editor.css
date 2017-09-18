@@ -91,12 +91,71 @@ html, body {
 		left:calc(100vw + 4em);
 	}
 
+	/*Tools and editors*/
+	#toolsEditor {
+		width:100vw;
+		height:100vh;
+		overflow-x:hidden;
+		overflow-y:scroll;
+		background-color:#fff;
+		position:absolute;
+		z-index:1000;
+		top:-100vh;
+		left:0px;
+		transition:all 1s ease;
+	}
+
+	.tools {
+		width:100vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		display:none;
+	}
+
+	.sectools {
+		width:90vw;
+		height:3em;
+		margin:0.5em auto;
+		overflow:hidden;
+	}
+
+	.head-section {
+		width:100%;
+		height:3em;
+		position:relative;
+		overflow:hidden;
+		box-shadow:inset 0 0 0 1px #000;
+		background-color:#f3f3f3;
+		text-align:center;
+	}
+
+	.sectoolstitle {
+		color:#080808;
+		height:100%;
+		font-size:15px;
+		text-align:center;
+		overflow:hidden;
+		text-transform:uppercase;
+		margin-top:16px;
+	}
+
+	.edit-area {
+		width:90vw;
+		height:auto;
+	}
+
+	#background {
+		width:100%;
+		height:15em;
+	}
+
 	/*Selection Button*/
 	#selection-buttons {
 		width:100vw;
 		height:3em;
 		position:absolute;
-		z-index:1000;
+		z-index:1000000;
 		bottom:0px;
 		left:0px;
 		border-top:1px solid #080808;
