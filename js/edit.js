@@ -31,6 +31,22 @@ for(var i = 0; i < learn.length; i++) {
 	useA[i] = use[i];
 }
 
+var open = 0;
+
+var editTitle = $(".editTitle");
+var editTitleA = new Array();
+
+for(var i = 0; i < editTitle.length; i++) {
+	editTitleA[i] = editTitle[i];
+}
+
+$(".editTitle").on("tap", function() {
+
+	var n = editTitleA.indexOf(this);
+	$(editorSec[n]).css("margin-left", "-8em");
+
+});
+
 var tools = $(".tools");
 
 for(var i = 0; i < use.length; i++) {
@@ -59,3 +75,4 @@ for(var i = 0; i < learn.length; i++) {
 	});
 
 }
+
