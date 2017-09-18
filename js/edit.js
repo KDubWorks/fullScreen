@@ -16,14 +16,15 @@ for(var i = 0; i < editorSec.length; i++) {
 
 function loop(mar) {
 
-	if(mar == "0px") {
+	if(mar == 0) {
 
 		$(".editorSec").on("swipeleft", function() {
 
 			var n = edSeA.indexOf(this);
 			$(this).css("margin-left", "-20vw");
 			var marginSwipe = $(edSeA[n]).css("margin-left");
-			loop(marginSwipe);
+			var marg = parseInt(marginSwipe);
+			loop(marg);
 
 		});
 
@@ -34,7 +35,8 @@ function loop(mar) {
 			var n = edSeA.indexOf(this);
 			$(this).css("margin-left", "0vw");
 			var marginSwipe = $(edSeA[n]).css("margin-left");
-			loop(marginSwipe);
+			var marg = parseInt(marginSwipe);
+			loop(marg);
 
 		});
 
@@ -42,6 +44,6 @@ function loop(mar) {
 
 }
 
-loop("0px");
+loop(0);
 
 
