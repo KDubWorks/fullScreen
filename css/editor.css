@@ -109,15 +109,16 @@ html, body {
 		width:100vw;
 		height:auto;
 		padding-top:1em;
-		padding-bottom:1em;
+		padding-bottom:4em;
 		display:none;
 	}
 
 	.sectools {
 		width:90vw;
 		height:3em;
-		margin:0.5em auto;
+		margin:1em auto;
 		overflow:hidden;
+		transition:all 0.75s ease;
 	}
 
 	.head-section {
@@ -138,6 +139,7 @@ html, body {
 		overflow:hidden;
 		text-transform:uppercase;
 		margin-top:16px;
+		cursor:default;
 	}
 
 	.edit-area {
@@ -145,10 +147,39 @@ html, body {
 		height:auto;
 	}
 
+	/*Background edit*/
+
 	#background {
 		width:100%;
 		height:15em;
-		box-shadow:inset 0 0 0 2px #000;
+		box-shadow:inset 0 0 5px #000;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-image:url("../img/hotel_1.jpg");
+	}
+
+	#selection {
+		width:100%;
+		height:15em;
+		overflow:hidden;
+		background-color:#f3f3f3;
+	}
+
+	#backcolorsel {
+		width:80vw;
+		height:6em;
+		box-shadow:inset 0 0 0 1px #080808;
+		margin:auto;
+		margin-top:1em;
+	}
+
+	#backgroundimgsel {
+		width:80vw;
+		height:6em;
+		box-shadow:inset 0 0 0 1px #080808;
+		margin:auto;
+		margin-top:1em;
 	}
 
 	/*Selection Button*/
@@ -168,11 +199,20 @@ html, body {
 		height:3em;
 		box-shadow:inset 0 0 0 1px #080808;
 		float:left;
+		text-align:center;
+		overflow:hidden;
 	}
+
 
 }
 
-@media only screen and (max-width:769px) and (orientation:landscape) {
+@media only screen and (max-width:768px) and (min-width:426px) and (orientation:portrait) {
+
+
+
+}
+
+@media only screen and (max-width:768px) and (orientation:landscape) {
 
 	#editor-ext {
 		width:100vw;
@@ -216,5 +256,11 @@ html, body {
 		right:0px;
 		background-color:#fff;
 	}
+
+}
+
+@media only screen and (min-width:769px) {
+
+
 
 }
