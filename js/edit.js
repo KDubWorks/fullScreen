@@ -1,13 +1,6 @@
-var win = $(window).width();
+$(".editorSec").on("swipeleft", function() {
 
-if(win <= 425) {
+	alert("Hello");
 
-	$(".editorSec").on("swipeleft", function() {
-
-		alert("Hello");
-
-	});
-
-} 
-
+});
 
