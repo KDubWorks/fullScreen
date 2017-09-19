@@ -189,6 +189,15 @@ html, body {
 		margin-top:1em;
 	}
 
+	#count {
+		width:100%;
+		height:6em;
+		background-color:#f3f3f3;
+		overflow:hidden;
+		position:relative;
+		
+	}
+
 	/*Selection Button*/
 	#selection-buttons {
 		width:100vw;
