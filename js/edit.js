@@ -51,12 +51,13 @@ if(win <= 425) {
 	});
 
 	/*This will close the title section cards*/
-	var slideOpen = document.querySelectorAll(".slide-open");
+	var slideOpen = $(".slide-open");
 	var slideOpenA = new Array();
 
 	for(var i = 0; i < slideOpen.length; i++) {
 		slideOpenA[i] = slideOpen[i];
 	}
+
 
 	for(var i = 0; i < slideOpen.length; i++) {
 
