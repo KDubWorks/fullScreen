@@ -50,6 +50,25 @@ if(win <= 425) {
 
 	});
 
+	/*This will close the title section cards*/
+	var slideOpen = document.querySelectorAll(".slide-open");
+	var slideOpenA = new Array();
+
+	for(var i = 0; i < slideOpen.length; i++) {
+		slideOpenA[i] = slideOpen[i];
+	}
+
+	for(var i = 0; i < slideOpen.length; i++) {
+
+		$(slideOpen[i]).on("tap", function() {
+
+			var n = slideOpenA.indexOf(this);
+			$(editorSec[n]).css("margin-left","0em");
+
+		});
+
+	}
+
 	var tools = $(".tools");
 
 	for(var i = 0; i < use.length; i++) {
