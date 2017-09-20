@@ -233,6 +233,13 @@ html, body {
 		overflow:hidden;
 	}
 
+	.editor {
+		width:100vw;
+		height:100vh;
+		overflow-y:scroll;
+		overflow-x:hidden;
+	}
+
 	#in-edit {
 		width:100vw;
 		height:auto;
@@ -266,7 +273,7 @@ html, body {
 	.editTitle > h6 {
 		text-transform:uppercase;
 		font-weight:normal;
-		margin-top:21px;
+		margin-top:28px;
 		font-size:18px;
 	}
 
