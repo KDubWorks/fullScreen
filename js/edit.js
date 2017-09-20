@@ -139,4 +139,22 @@ if(win <= 425) {
 
 	}
 
+} else if(win >= 426 && win <= 768) {
+
+	var editorTitle = $(".editorTitle");
+
+	$(editorSec).on("swipeleft", function() {
+
+		var n = edSeA.indexOf(this);
+		$(editorSec[n]).css("margin-left", "-8em");
+
+	});
+
+	$(editorSec).on("swiperight", function() {
+
+		var n = edSeA.indexOf(this);
+		$(editorSec[n]).css("margin-left", "0em");
+
+	});
+
 }
