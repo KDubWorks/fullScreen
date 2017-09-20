@@ -236,7 +236,7 @@ html, body {
 	#in-edit {
 		width:100vw;
 		height:auto;
-		border-bottom:0.25px solid #000;
+		border-bottom:1px solid #000;
 	}
 
 	.editorSec {
@@ -251,7 +251,7 @@ html, body {
 		height:4em;
 		position:relative;
 		overflow:hidden;
-		border:0.25px solid #000;
+		border:1px solid #000;
 	}
 
 	.editTitle {
