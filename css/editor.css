@@ -241,14 +241,14 @@ html, body {
 
 	.editorSec {
 		width:100vw;
-		height:4em;
+		height:6em;
 		overflow:hidden;
 
 	}
 
 	.editorTitle {
 		width:140vw;
-		height:4em;
+		height:6em;
 		position:relative;
 		overflow:hidden;
 		border:1px solid #000;
