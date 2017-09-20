@@ -225,6 +225,30 @@ html, body {
 
 @media only screen and (max-width:768px) and (min-width:426px) and (orientation:portrait) {
 
+	/*This is the editor*/
+	#editor-ext {
+		width:100vw;
+		height:100vh;
+		background-color:rgba(255,255,255,0.3);
+		overflow:hidden;
+	}
+
+	#in-edit {
+		width:100vw;
+		height:auto;
+	}
+
+	.editorSec {
+		width:100vw;
+		height:4em;
+		overflow:hidden;
+	}
+
+	/*These are the tools editor*/
+	#toolsEditor {
+		display:none;
+	}
+
 	/*Selection Buttons*/
 	#selection-buttons {
 		width:100vw;
@@ -251,15 +275,16 @@ html, body {
 
 @media only screen and (max-width:768px) and (orientation:landscape) {
 
-	#toolsEditor {
-		display:none;
-	}
 
 	#editor-ext {
 		width:100vw;
 		height:100vh;
 		overflow:hidden;
 		position:relative;
+	}
+
+	#toolsEditor {
+		display:none;
 	}
 
 	#editor {
@@ -304,4 +329,4 @@ html, body {
 
 
 
-}
+}	
