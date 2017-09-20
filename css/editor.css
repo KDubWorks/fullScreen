@@ -236,12 +236,37 @@ html, body {
 	#in-edit {
 		width:100vw;
 		height:auto;
+		border-bottom:0.25px solid #000;
 	}
 
 	.editorSec {
 		width:100vw;
 		height:4em;
 		overflow:hidden;
+	}
+
+	.editorTitle {
+		width:140vw;
+		height:4em;
+		position:relative;
+		overflow:hidden;
+		border:0.25px solid #000;
+	}
+
+	.editTitle {
+		width:100vw;
+		height:100vh;
+		background-color:#fff;
+		text-align:center;
+		overflow:hidden;
+		color:#080808;
+	}
+
+	.editTitle > h6 {
+		text-transform:uppercase;
+		font-weight:normal;
+		margin-top:21px;
+		font-size:18px;
 	}
 
 	/*These are the tools editor*/
