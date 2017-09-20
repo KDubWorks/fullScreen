@@ -248,7 +248,7 @@ html, body {
 	}
 
 	.editorSec {
-		width:140vw;
+		width:160vw;
 		height:6em;
 		overflow:hidden;
 		border:1px solid #000;
@@ -256,7 +256,7 @@ html, body {
 	}
 
 	.editorTitle {
-		width:140vw;
+		width:160vw;
 		height:6em;
 		position:relative;
 		overflow:hidden;
@@ -277,6 +277,36 @@ html, body {
 		font-weight:normal;
 		margin-top:38px;
 		font-size:18px;
+	}
+
+	.slide-open {
+		width:6em;
+		height:6em;
+		position:absolute;
+		z-index:1000;
+		top:0px;
+		background-color:#f3f3f3;
+		left:calc(100vw - 6em);
+	}
+
+	.use {
+		width:6em;
+		height:6em;
+		position:absolute;
+		z-index:10000;
+		top:0px;
+		left:100vw;
+		background-color:#00F6FF;
+	}
+
+	.learn {
+		width:6em;
+		height:6em;
+		position:absolute;
+		z-index:10000;
+		top:0px;
+		left:calc(100vw + 6em);
+		background-color:#0CA6E8;
 	}
 
 	/*These are the tools editor*/

@@ -146,7 +146,14 @@ if(win <= 425) {
 	$(editorSec).on("swipeleft", function() {
 
 		var n = edSeA.indexOf(this);
-		$(editorSec[n]).css("margin-left", "-8em");
+		$(editorSec[n]).css("margin-left", "-12em");
+
+	});
+
+	$(editorSec).on("tap", function() {
+
+		var n = edSeA.indexOf(this);
+		$(editorSec[n]).css("margin-left", "-12em");
 
 	});
 
