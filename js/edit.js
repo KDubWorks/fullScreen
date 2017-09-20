@@ -187,4 +187,23 @@ if(win <= 425) {
 
 	}
 
+	/*This will open the tools*/
+	var headSection = $(".head-section");
+	var headSectionA = new Array();
+	var sectools = $(".sectools");
+
+	for(var i = 0; i < headSection.length; i++) {
+		headSectionA[i] = headSection[i];
+	}
+
+	for(var i = 0; i < headSection.length; i++) {
+
+		$(headSection).on("tap", function() {
+
+			var n = headSectionA.indexOf(this);
+			$(sectools[n]).css("height", "auto");
+
+		});
+
+	}
 }
