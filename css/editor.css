@@ -195,7 +195,7 @@ html, body {
 		background-color:#f3f3f3;
 		overflow:hidden;
 		position:relative;
-		
+
 	}
 
 	/*Selection Button*/
@@ -225,7 +225,27 @@ html, body {
 
 @media only screen and (max-width:768px) and (min-width:426px) and (orientation:portrait) {
 
+	/*Selection Buttons*/
+	#selection-buttons {
+		width:100vw;
+		height:4em;
+		background-color:#fff;
+		position:absolute;
+		z-index:100000000;
+		bottom:0px;
+		left:0px;
+	}
 
+	.selection {
+		width:20vw;
+		height:4em;
+		float:left;
+		text-align:center;
+	}
+
+	.selection > img {
+		margin-top:15px;
+	}
 
 }
 
