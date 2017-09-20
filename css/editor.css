@@ -283,7 +283,8 @@ html, body {
 		width:6em;
 		height:6em;
 		position:absolute;
-		z-index:1000;
+		z-index:100000;
+		cursor:pointer;
 		top:0px;
 		background-color:#f3f3f3;
 		left:calc(100vw - 6em);

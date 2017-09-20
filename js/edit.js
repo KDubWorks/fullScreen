@@ -141,27 +141,50 @@ if(win <= 425) {
 
 } else if(win >= 426 && win <= 768) {
 
-	var editorTitle = $(".editorTitle");
+	var editorTitle = $(".editTitle");
+	var edTiA = new Array();
 
-	$(editorSec).on("swipeleft", function() {
+	for(var i = 0; i < editorTitle.length; i++) {
+		edTiA[i] = editorTitle[i];
+	}
 
-		var n = edSeA.indexOf(this);
+	$(editorTitle).on("swipeleft", function() {
+
+		var n = edTiA.indexOf(this);
 		$(editorSec[n]).css("margin-left", "-12em");
 
 	});
 
-	$(editorSec).on("tap", function() {
+	$(editorTitle).on("tap", function() {
 
-		var n = edSeA.indexOf(this);
+		var n = edTiA.indexOf(this);
 		$(editorSec[n]).css("margin-left", "-12em");
 
 	});
 
-	$(editorSec).on("swiperight", function() {
+	$(editorTitle).on("swiperight", function() {
 
-		var n = edSeA.indexOf(this);
+		var n = edTiA.indexOf(this);
 		$(editorSec[n]).css("margin-left", "0em");
 
 	});
+
+	var slideOpen = $(".slide-open");
+	var slideOpenA = new Array();
+
+	for(var i = 0; i < slideOpen.length; i++) {
+		slideOpenA[i] = slideOpen[i];
+	}
+
+	for(var i = 0; i < slideOpen.length; i++) {
+
+		$(slideOpen[i]).on("tap", function() {
+
+			var n = slideOpenA.indexOf(this);
+			$(editorSec[n]).css("margin-left", "0em");
+
+		});
+
+	}
 
 }
