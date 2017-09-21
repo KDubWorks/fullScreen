@@ -317,16 +317,18 @@ html, body {
 		background-color:#fff;
 		position:absolute;
 		z-index:1000000;
-		top:0px;
+		top:-100vh;
 		left:0px;
 		overflow-x:hidden;
 		overflow-y:scroll;
+		transition:all 0.75s ease;
 
 	}
 
 	.tools {
 		width:100%;
 		height:auto;
+		display:none;
 	}
 
 	.sectools {
