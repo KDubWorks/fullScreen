@@ -206,4 +206,27 @@ if(win <= 425) {
 		});
 
 	}
+
+	/*Open Sections*/
+	var use = $(".use");
+	var useA = new Array();
+
+	for(var i = 0; i < use.length; i++) {
+		useA[i] = use[i]
+	}
+
+	var tools = $(".tools");
+
+	for(var i = 0; i < use.length; i++) {
+
+		$(use).on("tap", function() {
+
+			$("#toolsEditor").css("top", "0vh");
+			var n = useA.indexOf(this);
+			$(tools[n]).css("display", "block");
+
+		});
+
+	}
+
 }
