@@ -8,13 +8,13 @@ for(var i = 0; i < editorSec.length; i++) {
 	edSeA[i] = editorSec[i];
 }
 
-if(win > winH) {
+if(win >= winH) {
 
 	alert("Hello");
 
 }
 
-if(winH < win) {
+if(winH >= win) {
 
 	alert("Not Hello");
 
