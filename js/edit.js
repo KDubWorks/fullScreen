@@ -1,4 +1,5 @@
 var win = $(window).width();
+var winH = $(window).height();
 
 var editorSec = $(".editorSec");
 var edSeA = new Array();
@@ -7,6 +8,17 @@ for(var i = 0; i < editorSec.length; i++) {
 	edSeA[i] = editorSec[i];
 }
 
+if(win > winH) {
+
+	alert("Hello");
+
+}
+
+if(winH < win) {
+
+	alert("Not Hello");
+
+}
 
 if(win <= 425) {
 
