@@ -78,6 +78,7 @@ if(win <= 425) {
 
 			var n = useA.indexOf(this);
 			$("#toolsEditor").css("top", "0vh");
+			$("#close-tool").css("display", "block");
 
 			if(n == 0) {
 
@@ -108,6 +109,18 @@ if(win <= 425) {
 		});
 
 	}
+
+	/*This will close the tools*/
+
+	$("#close-tool").on("tap", function() {
+
+		$("#toolsEditor").css("top", "-100vh");
+		setTimeout(function() {
+			$(".tools").css("display", "none");
+		}, 800);
+		$(this).css("display", "none");
+
+	});
 
 	for(var i = 0; i < learn.length; i++) {
 
