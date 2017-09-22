@@ -8,18 +8,6 @@ for(var i = 0; i < editorSec.length; i++) {
 	edSeA[i] = editorSec[i];
 }
 
-if(win >= winH) {
-
-	alert("Hello");
-
-}
-
-if(winH >= win) {
-
-	alert("Not Hello");
-
-}
-
 if(win <= 425) {
 
 	$(".editorSec").on("swipeleft", function() {
