@@ -8,7 +8,13 @@ for(var i = 0; i < editorSec.length; i++) {
 	edSeA[i] = editorSec[i];
 }
 
-if(win <= 425) {
+if(win > winH) {
+
+
+
+} else {
+
+	if(win <= 425) {
 
 	$(".editorSec").on("swipeleft", function() {
 
@@ -241,5 +247,7 @@ if(win <= 425) {
 		});
 
 	}
+
+}
 
 }
