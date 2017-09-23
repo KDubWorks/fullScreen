@@ -52,6 +52,7 @@ if(win > winH) {
 	$(".editTitle").on("tap", function() {
 
 		var n = editTitleA.indexOf(this);
+		$(editorSec[n]).css("background-color", "#fff");
 		$(editorSec[n]).css("margin-left", "-8em");
 
 	});
@@ -158,96 +159,96 @@ if(win > winH) {
 
 	}
 
-} else if(win >= 426 && win <= 768) {
+	} else if(win >= 426 && win <= 768) {
 
-	var editorTitle = $(".editTitle");
-	var edTiA = new Array();
+		var editorTitle = $(".editTitle");
+		var edTiA = new Array();
 
-	for(var i = 0; i < editorTitle.length; i++) {
-		edTiA[i] = editorTitle[i];
-	}
+		for(var i = 0; i < editorTitle.length; i++) {
+			edTiA[i] = editorTitle[i];
+		}
 
-	$(editorTitle).on("swipeleft", function() {
+		$(editorTitle).on("swipeleft", function() {
 
-		var n = edTiA.indexOf(this);
-		$(editorSec[n]).css("margin-left", "-12em");
+			var n = edTiA.indexOf(this);
+			$(editorSec[n]).css("margin-left", "-12em");
 
-	});
+		});
 
-	$(editorTitle).on("tap", function() {
+		$(editorTitle).on("tap", function() {
 
-		var n = edTiA.indexOf(this);
-		$(editorSec[n]).css("margin-left", "-12em");
+			var n = edTiA.indexOf(this);
+			$(editorSec[n]).css("margin-left", "-12em");
 
-	});
+		});
 
-	$(editorTitle).on("swiperight", function() {
+		$(editorTitle).on("swiperight", function() {
 
-		var n = edTiA.indexOf(this);
-		$(editorSec[n]).css("margin-left", "0em");
-
-	});
-
-	var slideOpen = $(".slide-open");
-	var slideOpenA = new Array();
-
-	for(var i = 0; i < slideOpen.length; i++) {
-		slideOpenA[i] = slideOpen[i];
-	}
-
-	for(var i = 0; i < slideOpen.length; i++) {
-
-		$(slideOpen[i]).on("tap", function() {
-
-			var n = slideOpenA.indexOf(this);
+			var n = edTiA.indexOf(this);
 			$(editorSec[n]).css("margin-left", "0em");
 
 		});
 
+		var slideOpen = $(".slide-open");
+		var slideOpenA = new Array();
+
+		for(var i = 0; i < slideOpen.length; i++) {
+			slideOpenA[i] = slideOpen[i];
+		}
+
+		for(var i = 0; i < slideOpen.length; i++) {
+
+			$(slideOpen[i]).on("tap", function() {
+
+				var n = slideOpenA.indexOf(this);
+				$(editorSec[n]).css("margin-left", "0em");
+
+			});
+
+		}
+
+		/*This will open the tools*/
+		var headSection = $(".head-section");
+		var headSectionA = new Array();
+		var sectools = $(".sectools");
+
+		for(var i = 0; i < headSection.length; i++) {
+			headSectionA[i] = headSection[i];
+		}
+
+		for(var i = 0; i < headSection.length; i++) {
+
+			$(headSection).on("tap", function() {
+
+				var n = headSectionA.indexOf(this);
+				$(sectools[n]).css("height", "auto");
+
+			});
+
+		}
+
+		/*Open Sections*/
+		var use = $(".use");
+		var useA = new Array();
+
+		for(var i = 0; i < use.length; i++) {
+			useA[i] = use[i]
+		}
+
+		var tools = $(".tools");
+
+		for(var i = 0; i < use.length; i++) {
+
+			$(use).on("tap", function() {
+
+				$("#toolsEditor").css("top", "0vh");
+				var n = useA.indexOf(this);
+				$(tools[n]).css("display", "block");
+
+			});
+
+		}
+
 	}
-
-	/*This will open the tools*/
-	var headSection = $(".head-section");
-	var headSectionA = new Array();
-	var sectools = $(".sectools");
-
-	for(var i = 0; i < headSection.length; i++) {
-		headSectionA[i] = headSection[i];
-	}
-
-	for(var i = 0; i < headSection.length; i++) {
-
-		$(headSection).on("tap", function() {
-
-			var n = headSectionA.indexOf(this);
-			$(sectools[n]).css("height", "auto");
-
-		});
-
-	}
-
-	/*Open Sections*/
-	var use = $(".use");
-	var useA = new Array();
-
-	for(var i = 0; i < use.length; i++) {
-		useA[i] = use[i]
-	}
-
-	var tools = $(".tools");
-
-	for(var i = 0; i < use.length; i++) {
-
-		$(use).on("tap", function() {
-
-			$("#toolsEditor").css("top", "0vh");
-			var n = useA.indexOf(this);
-			$(tools[n]).css("display", "block");
-
-		});
-
-	}
-
-}
 
 }

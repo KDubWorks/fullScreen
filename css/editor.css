@@ -110,6 +110,12 @@ html, body {
 		z-index:1000;
 		left:calc(100vw - 4em);
 		top:0px;
+		text-align:center;
+	}
+
+	.slide-open > img {
+		margin-top:1.35em;
+		margin-left:0.25em;
 	}
 
 	.editTitle > h6 {
