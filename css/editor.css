@@ -508,9 +508,10 @@ html, body {
 	#in-edit {
 		height:100%;
 		width:120em;
-		box-shadow:inset 0 0 0 2px #000;
 		overflow:hidden;
 	}
+
+
 
 	/*tools editor*/
 	#toolsEditor {
@@ -536,7 +537,7 @@ html, body {
 	}
 
 	.selection > img {
-		margin-top:51px;
+		margin-top:8vh;
 	}
 	
 }
