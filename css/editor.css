@@ -454,54 +454,91 @@ html, body {
 
 @media only screen and (max-width:768px) and (orientation:landscape) {
 
-
+	/*This is the exterior of the editor*/
 	#editor-ext {
 		width:100vw;
 		height:100vh;
-		overflow:hidden;
+		background-color:#fff;
 		position:relative;
+		overflow:hidden;
 	}
 
-	#toolsEditor {
+	/*Editor Title*/
+	#editor-title {
+		width:calc(100vw - 4em);
+		height:4em;
+		background-color:transparent;
+		text-align:center;
+		overflow:hidden;
+		position:absolute;
+		z-index:100000;
+		top:0px;
+		left:0px;
+		background-color:#fff;
+	}
+
+	#close-tool {
+		position:absolute;
+		z-index:1000;
 		display:none;
 	}
 
+	#edit-title-top {
+		font-size:18px;
+		text-transform:uppercase;
+		font-weight:normal;
+		padding:5px;
+		width:12em;
+		border:2px solid #484848;
+		margin:auto;
+		margin-top:15px;
+	}
+
+	/*Editor*/
 	#editor {
-		width:100vw;
-		height:100vh;
+		height:calc(100vh - 4em);
+		width:calc(100vw - 4em);
+		position:absolute;
+		bottom:0px;
+		left:0px;
 		overflow-y:hidden;
 		overflow-x:scroll;
 	}
 
 	#in-edit {
-		width:120vw;
-		height:100vh;
-		padding-right:4em;
-	}
-
-	.editorSec {
-		width:40vw;
-		height:50vh;
-		box-shadow:inset 0 0 0 1px #000;
-		float:left;
+		height:100%;
+		width:120em;
+		box-shadow:inset 0 0 0 2px #000;
 		overflow:hidden;
 	}
 
+	/*tools editor*/
 	#toolsEditor {
 		display:none;
 	}
 
+	/*Selection Buttons*/
 	#selection-buttons {
-		width:4em;
-		height:100vh;
-		box-shadow:0 0 0 1px #080808;
 		position:absolute;
-		z-index:10000;
+		z-index:1000000000;
 		top:0px;
 		right:0px;
 		background-color:#fff;
+		width:4em;
+		height:100vh;
 	}
 
+	.selection {
+		text-align:center;
+		width:4em;
+		height:20vh;
+		overflow:hidden;
+	}
+
+	.selection > img {
+		margin-top:51px;
+	}
+	
 }
 
 @media only screen and (min-width:769px) {
