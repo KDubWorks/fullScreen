@@ -52,7 +52,6 @@ if(win > winH) {
 	$(".editTitle").on("tap", function() {
 
 		var n = editTitleA.indexOf(this);
-		$(editorSec[n]).css("outline", "none");
 		$(editorSec[n]).css("margin-left", "-8em");
 
 	});
