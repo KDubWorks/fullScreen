@@ -112,6 +112,7 @@ html, body {
 		left:calc(100vw - 4em);
 		top:0px;
 		text-align:center;
+		-webkit-tap-highlight-color: rgba(0,0,0,0); 
 	}
 
 	.slide-open > img {
@@ -134,6 +135,7 @@ html, body {
 		position:absolute;
 		left:100vw;
 		text-align:center;
+		-webkit-tap-highlight-color: rgba(0,0,0,0); 
 	}
 
 	.use > img {
@@ -148,6 +150,7 @@ html, body {
 		position:absolute;
 		left:calc(100vw + 4em);
 		text-align:center;
+		-webkit-tap-highlight-color: rgba(0,0,0,0); 
 	}
 
 	.learn > img {
@@ -182,6 +185,7 @@ html, body {
 		margin:1em auto;
 		overflow:hidden;
 		transition:all 0.75s ease;
+		-webkit-tap-highlight-color: rgba(0,0,0,0); 
 	}
 
 	.head-section {
