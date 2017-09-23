@@ -126,6 +126,11 @@ html, body {
 		float:left;
 		position:absolute;
 		left:100vw;
+		text-align:center;
+	}
+
+	.use > img {
+		margin-top:1.05em;
 	}
 
 	.learn {
@@ -135,6 +140,11 @@ html, body {
 		float:left;
 		position:absolute;
 		left:calc(100vw + 4em);
+		text-align:center;
+	}
+
+	.learn > img {
+		margin-top:1.05em;
 	}
 
 	/*Tools and editors*/
@@ -262,7 +272,7 @@ html, body {
 
 }
 
-@media only screen and (max-width:768px) and (min-width:426px) and (orientation:portrait) {
+@media only screen and (max-width:768px) and (min-width:426px) {
 
 	/*This is the editor*/
 	#editor-ext {
@@ -450,158 +460,6 @@ html, body {
 		margin-top:15px;
 	}
 
-}
-
-@media only screen and (max-width:768px) and (orientation:landscape) {
-
-	/*This is the exterior of the editor*/
-	#editor-ext {
-		width:100vw;
-		height:100vh;
-		background-color:#fff;
-		position:relative;
-		overflow:hidden;
-	}
-
-	/*Editor Title*/
-	#editor-title {
-		width:calc(100vw - 4em);
-		height:4em;
-		background-color:transparent;
-		text-align:center;
-		overflow:hidden;
-		position:absolute;
-		z-index:100000;
-		top:0px;
-		left:0px;
-		background-color:#fff;
-	}
-
-	#close-tool {
-		position:absolute;
-		z-index:1000;
-		display:none;
-	}
-
-	#edit-title-top {
-		font-size:18px;
-		text-transform:uppercase;
-		font-weight:normal;
-		padding:5px;
-		width:12em;
-		border:2px solid #484848;
-		margin:auto;
-		margin-top:15px;
-	}
-
-	/*tools editor*/
-	#toolsEditor {
-		display:none;
-	}
-
-	/*Editor*/
-	#editor {
-		height:calc(100vh - 4em);
-		width:calc(100vw - 4em);
-		position:absolute;
-		bottom:0px;
-		left:0px;
-		overflow-y:hidden;
-		overflow-x:scroll;
-	}
-
-	#in-edit {
-		height:100%;
-		width:calc(78em + 12px);
-		overflow:hidden;
-		border-top:0.25px solid #484848;
-		border-left:0.25px solid #484848;
-		border-right:0.25px solid #484848;
-	}
-
-	.editorSec {
-		height:calc(100vh - 4em);
-		width:13em;
-		border:0.25px solid #484848;
-		float:left;
-		overflow-x:hidden;
-		overflow-y:scroll;
-	}
-
-	.editorTitle {
-		width:13em;
-		height:calc(100% + 14em);
-		overflow:hidden;
-		position:relative;
-	}
-
-	.editTitle {
-		width:13em;
-		height:calc(100vh - 4em);
-		overflow:hidden;
-		text-align:center;
-	}
-
-	.editTitle > h6 {
-		text-transform:uppercase;
-		color:#484848;
-		font-size:16px;
-		font-weight:normal;
-		margin-top:45%;
-	}
-
-	.slide-open {
-		width:13em;
-		height:7em;
-		position:absolute;
-		z-index:1000000;
-		left:0px;
-		bottom:14em;
-		background-color:#f3f3f3;
-	}
-
-	.use {
-		width:13em;
-		height:7em;
-		position:absolute;
-		z-index:1000000;
-		left:0px;
-		bottom:7em;
-		background-color:#00F6FF;
-	}
-
-	.learn {
-		width:13em;
-		height:7em;
-		position:absolute;
-		z-index:1000000;
-		left:0px;
-		bottom:0em;
-		background-color:#0CA6E8;
-	}
-
-	/*Selection Buttons*/
-	#selection-buttons {
-		position:absolute;
-		z-index:1000000000;
-		top:0px;
-		right:0px;
-		background-color:#fff;
-		width:4em;
-		height:100vh;
-	}
-
-	.selection {
-		text-align:center;
-		width:4em;
-		height:20vh;
-		overflow:hidden;
-	}
-
-	.selection > img {
-		margin-top:5vh;
-	}
-	
 }
 
 @media only screen and (min-width:769px) {
