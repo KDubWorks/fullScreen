@@ -193,6 +193,37 @@ if(win > winH) {
 	}
 
 	/*-------------------------------
+	This will change editor for the background
+	-------------------------------*/
+
+	/*-----This will change the
+	background count-----*/
+
+	$("#change-up-count").on("tap", function() {
+
+		var bct = document.getElementById("count-pre").innerHTML;
+		var bcti = parseInt(bct);
+		bcti = bcti + 1;
+
+		if(bcti < 6) {
+			document.getElementById("count-pre").innerHTML = bcti;
+		}
+
+	});
+
+	$("#change-down-count").on("tap", function() {
+
+		var bct = document.getElementById("count-pre").innerHTML;
+		var bcti = parseInt(bct);
+		bcti = bcti - 1;
+
+		if(bcti > 0) {
+			document.getElementById("count-pre").innerHTML = bcti;
+		}
+
+	});
+
+	/*-------------------------------
 	This will change editor for the title
 	-------------------------------*/
 
@@ -297,6 +328,8 @@ if(win > winH) {
 		}, 810);
 
 	});
+
+
 
 	} else if(win >= 426 && win <= 768) {
 

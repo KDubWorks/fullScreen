@@ -265,10 +265,57 @@ html, body {
 
 	#count {
 		width:100%;
-		height:6em;
+		height:4em;
 		background-color:#f3f3f3;
 		overflow:hidden;
 		position:relative;
+	}
+
+	#up-count {
+		width:20%;
+		height:4em;
+		float:left;
+		margin-left:20%;
+	}
+
+	#change-up-count {
+		margin-left:28%;
+		margin-top:23%;
+		overflow:hidden;
+	}
+
+	#back-count {
+		width:20%;
+		height:100%;
+		overflow:hidden;
+		text-align:center;
+		float:left;
+	}
+
+	#back-count > h3 {
+		font-size:20px;
+		font-weight:normal;
+		color:#484848;
+	}
+
+	#down-count {
+		width:20%;
+		height:4em;
+		float:left;
+	}
+
+	#change-down-count {
+		margin-left:28%;
+		margin-top:23%;
+		overflow:hidden;
+	}
+
+	#animation {
+		width:100%;
+		height:10em;
+		background-color:#f3f3f3;
+		overflow:hidden;
+		text-align:center;
 	}
 
 	/*Title Editor*/
