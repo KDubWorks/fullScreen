@@ -187,12 +187,14 @@ html, body {
 		padding-top:4.5em;
 		padding-bottom:4em;
 		display:none;
+		overflow-x:hidden;
 	}
 
 	.sectools {
 		width:90vw;
 		height:3em;
-		margin:1em auto;
+		margin-top:1em;
+		margin-left:5vw;
 		overflow:hidden;
 		transition:all 0.75s ease;
 		-webkit-tap-highlight-color: rgba(0,0,0,0); 
@@ -224,8 +226,7 @@ html, body {
 		height:auto;
 	}
 
-	/*Background edit*/
-
+	/*Background Editor*/
 	#background {
 		width:100%;
 		height:15em;
@@ -388,6 +389,54 @@ html, body {
 		background-color:#f3f3f3;
 		overflow:hidden;
 		text-align:center;
+	}
+
+	/*Date Editor*/
+	#date-preview {
+		width:100%;
+		height:8em;
+		background-color:#f3f3f3;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#date-setup {
+		width:100%;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		overflow:hidden;
+		text-align:center;
+		background-color:#f3f3f3;
+	}
+
+	#single-date, #multiple-dates {
+		padding:5px;
+		outline:none;
+		background-color:transparent;
+		color:#484848;
+		border:3px solid #484848;
+		font-size:16px;
+		text-transform:uppercase;
+	}
+
+	#single-date {
+		background-color:#484848;
+		color:#f3f3f3;
+	}
+
+	#single-date:hover, #multiple-dates:hover {
+		background-color:#484848;
+		color:#f3f3f3;
+	}
+
+	#sdsect {
+		transition:all 0.75s ease;
+	}
+
+	#stdtsect, #endtsect, #bttxtsect {
+		margin-left:-100vw;
+		transition:all 0.75s ease;
 	}
 
 	/*Selection Button*/

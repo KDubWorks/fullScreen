@@ -185,7 +185,7 @@ if(win > winH) {
 	}
 
 	/*-------------------------------
-	This will change editor for the date
+	This will change editor for the title
 	-------------------------------*/
 
 	/*-----This will change the 
@@ -211,6 +211,82 @@ if(win > winH) {
 		if(fpti > 11) {
 			document.getElementById("font-pre-text").innerHTML = fpti;
 		}
+
+	});
+
+	/*-------------------------------
+	This will change editor for the date
+	-------------------------------*/
+
+	/*-----This will choose the date setup-----*/
+	$("#multiple-dates").on("tap", function() {
+
+		$(this).css("background-color", "#484848");
+		$(this).css("color", "#f3f3f3");
+
+		$("#single-date").css("background-color", "#f3f3f3");
+		$("#single-date").css("color", "#484848");
+
+		$("#sdsect").css("margin-left", "-100vw");
+		setTimeout(function() {
+
+			$("#sdsect").css("display", "none");
+
+		} , 800);
+
+		setTimeout(function() {
+
+			$("#stdtsect").css("margin-left", "5vw");
+
+		}, 810);
+
+		setTimeout(function() {
+
+			$("#endtsect").css("margin-left", "5vw");
+
+		}, 820);
+
+		setTimeout(function() {
+
+			$("#bttxtsect").css("margin-left", "5vw");
+
+		}, 830);
+
+	});
+
+	$("#single-date").on("tap", function() {
+
+		$(this).css("background-color", "#484848");
+		$(this).css("color", "#f3f3f3");
+
+		$("#multiple-dates").css("background-color", "#f3f3f3");
+		$("#multiple-dates").css("color", "#484848");
+
+		$("#stdtsect").css("margin-left", "-100vw");
+
+		setTimeout(function() {
+
+			$("#endtsect").css("margin-left", "-100vw");
+
+		}, 10);
+
+		setTimeout(function() {
+
+			$("#bttxtsect").css("margin-left", "-100vw");
+			
+		}, 20);
+
+		setTimeout(function() {
+
+			$("#sdsect").css("display", "block");
+
+		}, 800);
+
+		setTimeout(function() {
+
+			$("#sdsect").css("margin-left", "5vw");
+
+		}, 810);
 
 	});
 
