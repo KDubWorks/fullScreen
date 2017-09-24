@@ -18,10 +18,13 @@ html, body {
 	#editor-ext {
 		width:100vw;
 		height:100vh;
+		position:absolute;
+		z-index:100000;
 		overflow:hidden;
 		position:relative;
 		transition:all 0.75s ease;
 		outline:none;
+		background-color:#fff;
 	}
 
 	.ui-page {

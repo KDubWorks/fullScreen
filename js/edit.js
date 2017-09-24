@@ -16,6 +16,14 @@ if(win > winH) {
 
 	if(win <= 425) {
 
+	/*This will calculate the height of the body*/
+	var bodyAreaH = $("#body-area").height();
+	var boxShadowH = $("#box-shadow").height();
+
+	var remaining = (bodyAreaH - boxShadowH - 65) / 2;
+
+	$("#box-shadow").css("margin-top", remaining + "px");
+
 	var use = $(".use");
 	var useA = new Array();
 
