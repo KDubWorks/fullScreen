@@ -265,7 +265,36 @@ html, body {
 		background-color:#f3f3f3;
 		overflow:hidden;
 		position:relative;
+	}
 
+	/*Title Editor*/
+
+	#title {
+		width:100%;
+		height:3em;
+		overflow:hidden;
+		text-align:center;
+		background-color:#f3f3f3;
+	}
+
+	#change-title {
+		width:100%;
+		height:3em;
+		overflow:hidden;
+		text-align:center;
+		background-color:#f3f3f3;
+	}
+
+	#change-title-text {
+		width:75%;
+		height:1.75em;
+		outline:none;
+		text-align:center;
+		font-size:16px;
+		margin:auto;
+		margin-top:8px;
+		text-transform:uppercase;
+		border:0.25px solid #484848;
 	}
 
 	/*Selection Button*/
