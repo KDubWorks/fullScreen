@@ -184,6 +184,36 @@ if(win > winH) {
 
 	}
 
+	/*-------------------------------
+	This will change editor for the date
+	-------------------------------*/
+
+	/*-----This will change the 
+	font size of the title text-----*/
+	$("#change-up").on("tap", function() {
+
+		var fpt = document.getElementById("font-pre-text").innerHTML;
+		var fpti = parseInt(fpt);
+		fpti = fpti + 1;
+
+		if(fpti < 30) {
+			document.getElementById("font-pre-text").innerHTML = fpti;
+		}
+
+	});
+
+	$("#change-down").on("tap", function() {
+
+		var fpt = document.getElementById("font-pre-text").innerHTML;
+		var fpti = parseInt(fpt);
+		fpti = fpti - 1;
+
+		if(fpti > 11) {
+			document.getElementById("font-pre-text").innerHTML = fpti;
+		}
+
+	});
+
 	} else if(win >= 426 && win <= 768) {
 
 		var editorTitle = $(".editTitle");
