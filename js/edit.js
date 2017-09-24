@@ -16,48 +16,22 @@ if(win > winH) {
 
 	if(win <= 425) {
 
-	$(".editorSec").on("swipeleft", function() {
+	var selections = $(".selection").children();
+	var selA = new Array();
 
-		$(this).css("margin-left", "-8em");
+	for(var i = 0; i < selections.length; i++) {
+		selA[i] = selections[i];
+	}
 
-	});
-
-
-	$(".editorSec").on("swiperight", function() {
-
-		$(this).css("margin-left", "0vw");
-
-	});
-
-	var use = document.querySelectorAll(".use");
+	var use = $(".use");
 	var useA = new Array();
 
-	var learn = document.querySelectorAll(".learn");
+	var learn = $(".learn");
 	var learnA = new Array();
-
-	for(var i = 0; i < learn.length; i++) {
-		learnA[i] = learn[i];
-		useA[i] = use[i];
-	}
-
-	var open = 0;
-
-	var editTitle = $(".editTitle");
-	var editTitleA = new Array();
-
-	for(var i = 0; i < editTitle.length; i++) {
-		editTitleA[i] = editTitle[i];
-	}
-
-	$(".editTitle").on("tap", function() {
-
-		var n = editTitleA.indexOf(this);
-		$(editorSec[n]).css("margin-left", "-8em");
-
-	});
 
 	/*This will close the title section cards*/
 	var slideOpen = $(".slide-open");
+	var slOpC = slideOpen.children();
 	var slideOpenA = new Array();
 
 	for(var i = 0; i < slideOpen.length; i++) {
@@ -71,10 +45,48 @@ if(win > winH) {
 
 			var n = slideOpenA.indexOf(this);
 			$(editorSec[n]).css("margin-left","0em");
+			slOpC[n].setAttribute("src", "img/closeHigh.png");
 
 		});
 
 	}
+
+	for(var i = 0; i < learn.length; i++) {
+		learnA[i] = learn[i];
+		useA[i] = use[i];
+	}
+
+	$(".editorSec").on("swipeleft", function() {
+
+		var n = edSeA.indexOf(this);
+		$(this).css("margin-left", "-8em");
+		slOpC[n].setAttribute("src", "img/close.png");
+
+	});
+
+
+	$(".editorSec").on("swiperight", function() {
+
+		var n = edSeA.indexOf(this);
+		$(this).css("margin-left", "0vw");
+		slOpC[n].setAttribute("src", "img/closeHigh.png");
+
+	});
+
+	var editTitle = $(".editTitle");
+	var editTitleA = new Array();
+
+	for(var i = 0; i < editTitle.length; i++) {
+		editTitleA[i] = editTitle[i];
+	}
+
+	$(".editTitle").on("tap", function() {
+
+		var n = editTitleA.indexOf(this);
+		$(editorSec[n]).css("margin-left", "-8em");
+		slOpC[n].setAttribute("src", "img/close.png");
+
+	});
 
 	var tools = $(".tools");
 
