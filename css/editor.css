@@ -20,6 +20,16 @@ html, body {
 		height:100vh;
 		overflow:hidden;
 		position:relative;
+		transition:all 0.75s ease;
+		outline:none;
+	}
+
+	.ui-page {
+		outline:none;
+	}
+
+	.ui-loader > h1 {
+		display:none;
 	}
 
 	/*These are the editor Title*/
@@ -267,6 +277,7 @@ html, body {
 		bottom:0px;
 		left:0px;
 		background-color:#fff;
+		outline:none;
 	}
 
 	.selection {

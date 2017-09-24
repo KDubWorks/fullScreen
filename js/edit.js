@@ -16,13 +16,6 @@ if(win > winH) {
 
 	if(win <= 425) {
 
-	var selections = $(".selection").children();
-	var selA = new Array();
-
-	for(var i = 0; i < selections.length; i++) {
-		selA[i] = selections[i];
-	}
-
 	var use = $(".use");
 	var useA = new Array();
 
@@ -165,6 +158,27 @@ if(win > winH) {
 
 			var n = sectoolsA.indexOf(this);
 			$(sectools[n]).css("height", "auto");
+
+		});
+
+	}
+
+	var selections = $(".selection").children();
+	var selA = new Array();
+
+	for(var i = 0; i < selections.length; i++) {
+		selA[i] = selections[i];
+	}
+
+	for(var i = 0; i < selA.length; i++) {
+
+		$(selections[i]).on("tap", function() {
+
+			var n = selA.indexOf(this);
+
+			if(n == 0) {
+				$("#editor-ext").css("height", "0px");
+			}
 
 		});
 
