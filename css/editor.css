@@ -198,6 +198,7 @@ html, body {
 		height:3em;
 		margin-top:1em;
 		margin-left:5vw;
+		position:relative;
 		overflow:hidden;
 		transition:all 0.75s ease;
 		-webkit-tap-highlight-color: rgba(0,0,0,0); 
@@ -213,6 +214,17 @@ html, body {
 		text-align:center;
 	}
 
+	.close-div {
+		width:100%;
+		height:3em;
+		position:absolute;
+		z-index:100000;
+		top:0px;
+		left:0px;
+		display:none;
+		background-color:transparent;
+	}
+
 	.sectoolstitle {
 		color:#080808;
 		height:100%;
@@ -222,20 +234,6 @@ html, body {
 		text-transform:uppercase;
 		margin-top:16px;
 		cursor:default;
-	}
-
-	#up {
-		position:absolute;
-		top:0px;
-		right:0px;
-		z-index:100000;
-	}
-
-	#coloradd {
-		position:absolute;
-		top:0px;
-		right:0px;
-		z-index:100000;
 	}
 
 	.edit-area {
@@ -262,7 +260,7 @@ html, body {
 		position:relative;
 	}
 
-	#color-select {
+	#color-select, #img-select {
 		width:100%;
 		height:15em;
 		background-color:#f3f3f3;

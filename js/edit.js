@@ -153,24 +153,48 @@ if(win > winH) {
 	}
 
 	/*This will open the specific tools*/
+	var headsec = $(".head-section");
+	var headsecA = new Array();
+	var closeDiv = $(".close-div");
+	var closeDivA = new Array();
 	var sectools = $(".sectools");
-	var sectoolsA = new Array();
 
-	for(var i = 0; i < sectools.length; i++) {
-		sectoolsA[i] = sectools[i];
+	for(var i = 0; i < headsec.length; i++) {
+		headsecA[i] = headsec[i];
+		closeDivA[i] = closeDiv[i];
 	}
 
-	for(var i = 0; i < sectools.length; i++) {
+	/*This is the code to open the tools*/
+	for(var i = 0; i < headsec.length; i++) {
 
-		$(sectools[i]).on("tap", function() {
+		$(headsec[i]).on("tap", function() {
 
-			var n = sectoolsA.indexOf(this);
+			var n = headsecA.indexOf(this);
 			$(sectools[n]).css("height", "auto");
+			setTimeout(function() {
+				$(closeDiv[n]).css("display", "block");
+			}, 10);
 
 		});
 
 	}
 
+	/*This will close the specific tools opened*/
+	for(var i = 0; i < closeDiv.length; i++) {
+
+		$(closeDiv[i]).on("tap", function() {
+
+			var n = closeDivA.indexOf(this);
+			sectools[n].removeAttribute("style");
+			setTimeout(function() {
+				$(closeDiv[n]).css("display", "none");
+			}, 10);
+
+		});
+
+	}
+
+	/*This closes the entire editor*/
 	var selections = $(".selection").children();
 	var selA = new Array();
 
@@ -198,10 +222,7 @@ if(win > winH) {
 
 	/*-----This will change the
 	background count-----*/
-
 	/*This is the array to get the background-count*/
-	var backImgCount;
-
 	$("#change-up-count").on("tap", function() {
 
 		var bct = document.getElementById("count-pre").innerHTML;
@@ -226,58 +247,6 @@ if(win > winH) {
 
 	});
 
-	$("#up").on("tap", function() {
-
-		var arrP = document.getElementById("count-pre").innerHTML;
-		var arrPC = parseInt(arrP);
-
-		backImgCount = new Array(arrPC);
-
-		addFilesToArray(arrPC);
-
-	});
-
-	/*This is the color select*/
-	var inColor = $(".in-color");
-	var inColorA = new Array();
-
-	for(var i = 0; i < inColor.length; i++) {
-		inColorA[i] = inColor[i];
-	}
-
-	function addFilesToArray(len) {
-
-		if(len == 1) {
-
-			for(var i = 0; i < inColor.length; i++) {
-
-				$(inColor[i]).on("tap", function() {
-
-					var n = inColorA.indexOf(this);
-
-					if(n == 0) {
-
-						alert("Hello from one");
-
-					}
-
-				});
-
-			}
-
-		} else {
-
-			alert("Hello");
-
-		}
-
-	}
-
-	addFilesToArray(1);
-
-	/*-----This will change the background 
-	image or color-----*/
-
 
 	/*-----This will select the 
 	images or colors for the 
@@ -295,6 +264,24 @@ if(win > winH) {
 		setTimeout(function() {
 
 			$("#color-select").css("left", "0px");
+
+		}, 800);
+
+	});
+
+	$("#backgroundimgsel").on("tap", function() {
+
+		$(this).css("margin-left", "-100vw");
+
+		setTimeout(function() {
+
+			$("#backcolorsel").css("margin-left", "-100vw");
+
+		}, 50);
+
+		setTimeout(function() {
+
+			$("#img-select").css("left", "0px");
 
 		}, 800);
 
