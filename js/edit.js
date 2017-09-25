@@ -391,6 +391,10 @@ if(win > winH) {
 					$(selectImg[n]).css("background-color", "#fff");
 					$(selectImg[n]).css("border", "2px solid #fff");
 
+					var backChange = $(imgSel[n]).css("background-image");
+
+					$("#first-back").css("background-image", backChange);
+
 					for(var i = 1; i <= 5; i++) {
 
 						$(selectImg[i]).css("display", "none");
@@ -403,6 +407,10 @@ if(win > winH) {
 					$(selectImg[n]).css("background-color", "#fff");
 					$(selectImg[n]).css("border", "2px solid #fff");
 
+					var backChange = $(imgSel[n]).css("background-image");
+
+					$("#first-back").css("background-image", backChange);
+
 					for(var i = 4; i >= 0; i--) {
 
 						$(selectImg[i]).css("display", "none");
@@ -414,6 +422,10 @@ if(win > winH) {
 
 					$(selectImg[n]).css("background-color", "#fff");
 					$(selectImg[n]).css("border", "2px solid #fff");
+
+					var backChange = $(imgSel[n]).css("background-image");
+
+					$("#first-back").css("background-image", backChange);
 
 					for(var i = 0; i < n; i++) {
 
