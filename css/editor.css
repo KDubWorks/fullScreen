@@ -245,10 +245,24 @@ html, body {
 	#background {
 		width:100%;
 		height:15em;
-		box-shadow:inset 0 0 5px #000;
-		background-size:cover;
+		overflow-y:hidden;
+		overflow-x:scroll;
+	}
+
+	#background-in {
+		width:90vw;
+		height:15em;
+	}
+
+	.back {
+		width:90vw;
+		height:15em;
 		background-repeat:no-repeat;
 		background-position:center center;
+		background-size:cover;
+	}
+
+	#first-back {
 		background-image:url("../img/hotel_1.jpg");
 	}
 
@@ -260,7 +274,7 @@ html, body {
 		position:relative;
 	}
 
-	#color-select, #img-select {
+	#color-select {
 		width:100%;
 		height:15em;
 		background-color:#f3f3f3;
@@ -282,6 +296,34 @@ html, body {
 		width:7.5em;
 		height:7.5em;
 		float:left;
+	}
+
+	#img-select {
+		width:100%;
+		height:15em;
+		background-color:#f3f3f3;
+		position:absolute;
+		z-index:100000;
+		top:0px;
+		left:-90vw;
+		overflow-y:hidden;
+		overflow-x:scroll;
+		transition:all 0.75s ease;
+	}
+
+	#in-img-select {
+		height:15em;
+		width:calc(90vw * 6);
+	}
+
+	.imgs-to-sel {
+		height:15em;
+		width:90vw;
+		float:left;
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:center center;
+		box-shadow:inset 0 0 0 1px #000;
 	}
 
 	#backcolorsel {
@@ -337,6 +379,11 @@ html, body {
 		margin-left:28%;
 		margin-top:23%;
 		overflow:hidden;
+		text-align:center;
+	}
+
+	#change-up-count > img {
+		margin-top:23%;
 	}
 
 	#back-count {
@@ -363,6 +410,11 @@ html, body {
 		margin-left:28%;
 		margin-top:23%;
 		overflow:hidden;
+		text-align:center;
+	}
+
+	#change-down-count > img {
+		margin-top:23%;
 	}
 
 	#animation {

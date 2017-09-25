@@ -130,7 +130,6 @@ if(win > winH) {
 	}
 
 	/*This will close the tools*/
-
 	$("#close-tool").on("tap", function() {
 
 		$("#toolsEditor").css("top", "-100vh");
@@ -194,7 +193,28 @@ if(win > winH) {
 
 	}
 
-	/*This closes the entire editor*/
+	/*-------------------------------
+	This closes the entire editor
+	-------------------------------*/
+
+	/*this will open the editor*/
+	$("#open-editor").on("tap", function() {
+
+		$(this).css("color", "#000");
+		$(this).css("background-color", "#fff");
+
+		$("#editor-ext").css("height", "100vh");
+
+		setTimeout(function() {
+
+			$("#open-editor").css("color", "#fff");
+			$("#open-editor").css("background-color", "transparent");
+
+		}, 760);
+
+	});
+
+	/*this will manage the bottom of the selection*/
 	var selections = $(".selection").children();
 	var selA = new Array();
 

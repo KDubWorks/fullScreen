@@ -10,6 +10,7 @@
 		position:absolute;
 		top:0px;
 		left:0px;
+		text-align:center;
 		background-repeat:no-repeat;
 		background-size:cover;
 		background-position:center center;
@@ -71,6 +72,20 @@
 		margin-top:1em;
 		border:3px solid #fff;
 		text-transform:uppercase;
+	}
+
+	/*This will open the editro*/
+	#open-editor {
+		padding:5px 15px;
+		color:#fff;
+		border:2px solid #fff;
+		outline:none;
+		color:#fff;
+		font-size:18px;
+		text-transform:uppercase;
+		background-color:transparent;
+		margin:auto;
+		margin-top:30%;
 	}
 
 }
