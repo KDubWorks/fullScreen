@@ -307,6 +307,73 @@ if(win > winH) {
 
 	});
 
+	/*-----This will select the background images
+	and swipe through them-----*/
+	var inImgWid = $("#in-img-select").width();
+	var inImgWidP = parseInt(inImgWid);
+	var imgSel = $(".imgs-to-sel");
+	var imgSelA = new Array();
+
+	for(var i = 0; i < imgSel.length; i++) {
+		imgSelA[i] = imgSel[i];
+	}
+
+	var imgSelL = $(imgSel[0]).width();
+	var whileConst = inImgWidP - imgSelL;
+
+	//This will slide the image selection left
+	for(var i = 0; i < imgSel.length; i++) {
+
+		$(imgSel[i]).on("swipeleft", function() {
+
+			var n = imgSelA.indexOf(this);
+
+			if(n == 0) {
+				$("#in-img-select").css("margin-left", "-90vw");
+			} else if(n == 1) {
+				$("#in-img-select").css("margin-left", "-180vw");
+			} else if(n == 2) {
+				$("#in-img-select").css("margin-left", "-270vw");
+			} else if(n == 3) {
+				$("#in-img-select").css("margin-left", "-360vw");
+			} else if(n == 4) {
+				$("#in-img-select").css("margin-left", "-450vw");
+			}
+
+		});
+		
+	}
+
+	//This will slide the image selection right
+	for(var i = 0; i < imgSel.length; i++) {
+
+		$(imgSel[i]).on("swiperight", function() {
+
+			var n = imgSelA.indexOf(this);
+
+			if(n == 5) {
+				$("#in-img-select").css("margin-left", "-360vw");
+			} else if(n == 4) {
+				$("#in-img-select").css("margin-left", "-270vw");
+			} else if(n == 3) {
+				$("#in-img-select").css("margin-left", "-180vw");
+			} else if(n == 2) {
+				$("#in-img-select").css("margin-left", "-90vw");
+			} else if(n == 1) {
+				$("#in-img-select").css("margin-left", "0vw");
+			}
+
+		});
+		
+	}
+
+	/*-------------------------------
+	This will change the icon image
+	-------------------------------*/
+
+	/*-----This will change the 
+	icon size-----*/
+
 	/*-------------------------------
 	This will change editor for the title
 	-------------------------------*/

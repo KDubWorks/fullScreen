@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script src="./jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("#box").animate({height: "300px"});
+    });
+    $("#btn2").click(function(){
+        $("#box").animate({height: "100px"});
+    });
+});
+</script>
+</head>
+<body>
+
+<button id="btn1">Animate height</button>
+<button id="btn2">Reset height</button>
+
+<div id="box" style="background: rgb(152, 191, 33); height: 300px; width: 100px; margin: 6px;"></div>
+
+
+
+</body></html>
