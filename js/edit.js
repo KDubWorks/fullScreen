@@ -367,6 +367,80 @@ if(win > winH) {
 		
 	}
 
+	//This will select the images
+	var selectImg = $(".select-img");
+	var selectImgA = new Array();
+
+	for(var i = 0; i < selectImg.length; i++) {
+		selectImgA[i] = selectImg[i];
+	}
+
+	for(var i = 0; i < selectImg.length; i++) {
+
+		$(selectImg[i]).on("tap", function() {
+
+			var n = selectImgA.indexOf(this);
+
+			var countNum = document.getElementById("count-pre").innerHTML;
+			var countNumP = parseInt(countNum);
+
+			if(countNumP == 1) {
+
+				if(n == 0) {
+
+					$(selectImg[n]).css("background-color", "#fff");
+					$(selectImg[n]).css("border", "2px solid #fff");
+
+					for(var i = 1; i <= 5; i++) {
+
+						$(selectImg[i]).css("display", "none");
+						$(imgSel[i]).css("box-shadow", "inset 0 0 0 800px rgba(0,0,0,0.5)")
+
+					}
+
+				} else if(n == 5) {
+
+					$(selectImg[n]).css("background-color", "#fff");
+					$(selectImg[n]).css("border", "2px solid #fff");
+
+					for(var i = 4; i >= 0; i--) {
+
+						$(selectImg[i]).css("display", "none");
+						$(imgSel[i]).css("box-shadow", "inset 0 0 0 800px rgba(0,0,0,0.5)")
+
+					}
+
+				} else {
+
+					$(selectImg[n]).css("background-color", "#fff");
+					$(selectImg[n]).css("border", "2px solid #fff");
+
+					for(var i = 0; i < n; i++) {
+
+						$(selectImg[i]).css("display", "none");
+						$(imgSel[i]).css("box-shadow", "inset 0 0 0 800px rgba(0,0,0,0.5)");
+
+					}
+
+					for(var j = 5; j > n; j--) {
+
+						$(selectImg[j]).css("display", "none");
+						$(imgSel[j]).css("box-shadow", "inset 0 0 0 800px rgba(0,0,0,0.5)");
+
+					}
+
+				}
+
+			} else {
+
+
+
+			}
+
+		});
+
+	}
+
 	/*-------------------------------
 	This will change the icon image
 	-------------------------------*/
