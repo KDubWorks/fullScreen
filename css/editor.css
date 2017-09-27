@@ -27,7 +27,7 @@ html, body {
 	------------------------------*/
 	#editor-ext {
 		width:100vh;
-		height:100vh;
+		height:0vh;
 		background-color:#fff;
 		overflow:hidden;
 		position:absolute;

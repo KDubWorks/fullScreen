@@ -130,13 +130,45 @@ if(winW > winH) {
 
 			var n = editorMenuA.indexOf(this);
 
-			if(n == 0) {
-
-				$("#editor-ext").css("height", "0px");
-
-			}
-
+			
 		});
 	}
+
+	/*This is the open close function for the editor*/
+	var open = 0;
+
+	function openEditor(o) {
+
+		if(o == 0) {
+
+			$(editorMenu[0]).on("tap", function() {
+
+				$("#editor-ext").css("height", "100vh");
+				open = 1;
+				closeEditor(open);
+
+			});
+
+		}
+
+	}
+
+	function closeEditor(c) {
+
+		if(c == 1) {
+
+			$(editorMenu[0]).on("tap", function() {
+
+				$("#editor-ext").css("height", "0vh");
+				open = 0;
+				openEditor(open);
+
+			});
+
+		}
+
+	}
+
+	openEditor(open);
 
 }
