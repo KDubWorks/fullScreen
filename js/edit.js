@@ -93,9 +93,30 @@ if(winW > winH) {
 
 	for(var i = 0; i < learn.length; i++) {
 		$(learn[i]).on("tap", function() {
-			
+
 			var n = learnA.indexOf(this);
 			$(editorOption[n]).css("height", "auto");
+
+		});
+	}
+
+	/*This will be the bottom selection. It will have the close
+	settings, save, publish, and menu button*/
+	var editorMenu = $(".editor-menu");
+	var editorMenuA = new Array();
+
+	fillArray(editorMenuA, editorMenu);
+
+	for(var i = 0; i < editorMenu.length; i++) {
+		$(editorMenu[i]).on("tap", function() {
+
+			var n = editorMenuA.indexOf(this);
+
+			if(n == 0) {
+
+				$("#editor-ext").css("height", "0px");
+
+			}
 
 		});
 	}
