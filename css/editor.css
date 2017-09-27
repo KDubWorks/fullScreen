@@ -146,6 +146,7 @@ html, body {
 		height:4em;
 		background-color:#f3f3f3;
 		position:absolute;
+		z-index:10000;
 		top:0px;
 		right:calc(8em);
 		text-align:center;
