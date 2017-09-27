@@ -25,6 +25,12 @@ if(winW > winH) {
 
 	fillArray(editTitleCardA, editTitleCard);
 
+	/*This is the slide close button*/
+	var slideOpen = $(".slide-open");
+	var slideOpenA = new Array();
+
+	fillArray(slideOpenA, slideOpen);
+
 	//this is the editor interior title that will be moved
 	var editorInterior = $(".editor-interior-option-section");
 
@@ -36,6 +42,9 @@ if(winW > winH) {
 			var n = editTitleCardA.indexOf(this);
 
 			$(editorInterior[n]).css("margin-left", "-8em");
+			//This is getting the img tag to add the colored close
+			var slideOpenImg = slideOpen.children();
+			slideOpenImg[n].setAttribute("src", "img/close.png");
 
 		});
 	}
@@ -48,6 +57,9 @@ if(winW > winH) {
 			var n = editTitleCardA.indexOf(this);
 
 			$(editorInterior[n]).css("margin-left", "-8em");
+			//This is getting the img tag to add the colored close
+			var slideOpenImg = slideOpen.children();
+			slideOpenImg[n].setAttribute("src", "img/close.png");
 
 		});
 	}
@@ -61,15 +73,14 @@ if(winW > winH) {
 
 			$(editorInterior[n]).css("margin-left", "0em");
 
+			//This is getting the img tag to remove the colored close
+			var slideOpenImg = slideOpen.children();
+			slideOpenImg[n].setAttribute("src", "img/closeHigh.png");
+
 		});
 	}
 
-	/*This is the slide close button*/
-	var slideOpen = $(".slide-open");
-	var slideOpenA = new Array();
-
-	fillArray(slideOpenA, slideOpen);
-
+	//This uses the slide open variable
 	/*This is the tap on the option to close it*/
 	for(var i = 0; i < slideOpen.length; i++) {
 		$(slideOpen[i]).on("tap", function() {
@@ -78,9 +89,40 @@ if(winW > winH) {
 			var n = slideOpenA.indexOf(this);
 
 			$(editorInterior[n]).css("margin-left", "0em");
+			//This is getting the img tag to remove the colored close
+			var slideOpenImg = slideOpen.children();
+			slideOpenImg[n].setAttribute("src", "img/closeHigh.png");
 
 		});
 	}
+
+	/*This will open the tool editor section*/
+	var use = $(".use");
+	var useA = new Array();
+
+	fillArray(useA, use);
+
+	for(var i = 0; i < use.length; i++) {
+		$(use[i]).on("tap", function() {
+
+			//This pulls the close editor down
+			$("#toolsEditor").css("top", "0px");
+
+			//This will open the close button
+			$("#close-tool").css("display", "block");
+
+			var n = useA.indexOf(this);
+
+		});
+	}
+
+	/*This will close the tools editor*/
+	$("#close-tool").on("tap", function() {
+
+		$("#toolsEditor").css("top", "-100vh");
+		$(this).css("display", "none");
+
+	});
 
 	/*This will open the learn section*/
 	var learn = $(".learn");

@@ -232,7 +232,118 @@ html, body {
 	is chosen.
 	------------------------------*/
 	#toolsEditor {
+		width:100vw;
+		height:100vh;
+		background-color:#fff;
+		overflow-x:hidden;
+		overflow-y:scroll;
+		position:absolute;
+		z-index:100000;
+		top:-100vh;
+		left:0px;
+		transition:all 0.75s ease;
+	}
+
+	.tools {
+		width:100vw;
+		height:auto;
+		padding-top:4em;
+		padding-bottom:4em;
+	}
+
+	/*This is the specific tools for each section*/
+	.sectools {
+		width:90vw;
+		height:3em;
+		overflow:hidden;
+		margin:auto;
+		margin-top:1em;
+		box-shadow:0 0 4px #484848;
+		position:relative;
+	}
+
+	/*These are the open close indicators*/
+	.open-indicator {
+		width:3em;
+		height:3em;
+		position:absolute;
+		z-index:1000000;
+		top:0px;
+		left:0px;
+		border-right:0.5px solid #A0A0A0;
+	}
+
+	.close-indicator {
+		width:3em;
+		height:3em;
+		position:absolute;
+		z-index:1000000000;
+		top:0px;
+		left:0px;
+		border-right:0.5px solid #A0A0A0;
+	}
+
+	.head-section {
+		width:90vw;
+		height:3em;
+		background-color:#f3f3f3;
+		text-align:center;
+		font-weight:normal;
+		text-transform:uppercase;
+		color:#484848;
+		border:0.25px solid #484848;
+		overflow:hidden;
+	}
+
+	.sectoolstitle {
+		font-size:15px;
+		margin-top:17.5px;
+	}
+
+	/*This close div is for tab based close interaction 
+	of the specific tools*/
+	.close-div {
+		width:90vw;
+		height:3em;
+		background-color:transparent;
+		position:absolute;
+		z-index:10000;
+		top:0px;
+		left:0px;
 		display:none;
+	}
+
+	/*------------------------------
+	----These is the background tools----
+	------------------------------*/
+	.edit-area {
+		width:90vw;
+		height:auto;
+	}
+
+	#background {
+		width:90vw;
+		height:15em;
+		overflow:hidden;
+	}
+
+	#background-in {
+		width:90vw;
+		height:15em;
+	}
+
+	.back {
+		width:90vw;
+		height:15em;
+		float:left;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center center;
+		box-shadow:inset 0 0 0 800px rgba(0,0,0,0.2);
+	}
+
+	#first-back {
+		background-image:url("../img/hotel_1.jpg");
 	}
 
 	/*------------------------------
