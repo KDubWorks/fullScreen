@@ -87,6 +87,12 @@ if(winW > winH) {
 	var learnA = new Array();
 
 	fillArray(learnA, learn);
+	/*This will grb the close learn button to close 
+	the other information*/
+	var closeLearn = $(".close-learn");
+	var closeLearnA = new Array();
+
+	fillArray(closeLearnA, closeLearn);
 
 	//editor options
 	var editorOption = $(".editor-option");
@@ -96,6 +102,18 @@ if(winW > winH) {
 
 			var n = learnA.indexOf(this);
 			$(editorOption[n]).css("height", "auto");
+			$(closeLearn[n]).css("display", "block");
+
+
+		});
+	}
+
+	for(var i = 0; i < closeLearn.length; i++) {
+		$(closeLearn[i]).on("tap", function() {
+
+			var n = closeLearnA.indexOf(this);
+			$(editorOption[n]).css("height", "4em");
+			$(closeLearn[n]).css("display", "none");
 
 		});
 	}
