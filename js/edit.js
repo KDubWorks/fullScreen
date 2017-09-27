@@ -82,4 +82,22 @@ if(winW > winH) {
 		});
 	}
 
+	/*This will open the learn section*/
+	var learn = $(".learn");
+	var learnA = new Array();
+
+	fillArray(learnA, learn);
+
+	//editor options
+	var editorOption = $(".editor-option");
+
+	for(var i = 0; i < learn.length; i++) {
+		$(learn[i]).on("tap", function() {
+			
+			var n = learnA.indexOf(this);
+			$(editorOption[n]).css("height", "auto");
+
+		});
+	}
+
 }
