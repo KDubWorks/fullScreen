@@ -1,41 +1,48 @@
-html, body {
-	width:100%;
-	height:100vh;
-	margin:0px;
-	padding:0px;
-	overflow:hidden;
-	position:relative;
-	font-family:sans-serif;
-}
-
 ::-webkit-scrollbar {
 	display:none;
 }
 
+html, body {
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	position:relative;
+	font-family:sans-serif;
+	font-weight:normal;
+	overflow:hidden;
+	-webkit-tap-highlight-color: rgba(0,0,0,0); 
+}
+
+/*This is the editor code for the phone portrait orientations*/
 @media only screen and (max-width:425px) and (orientation:portrait) {
 
-	/*Editor Area*/
+	/*------------------------------
+
+	--Exterior editor div--
+
+	This is the body of the editor, 
+	starting with #editor-ext, floating
+	over the actual display of the body
+	------------------------------*/
 	#editor-ext {
-		width:100vw;
+		width:100vh;
 		height:100vh;
-		position:absolute;
-		z-index:100000;
-		overflow:hidden;
-		position:relative;
-		transition:all 0.75s ease;
-		outline:none;
 		background-color:#fff;
+		overflow:hidden;
+		position:absolute;
+		z-index:1000;
+		top:0px;
+		left:0px;
+		transition:all 1s ease;
 	}
 
-	.ui-page {
-		outline:none;
-	}
+	/*------------------------------
 
-	.ui-loader > h1 {
-		display:none;
-	}
+	--This is the editor title--
 
-	/*These are the editor Title*/
+	This is the editor title
+	------------------------------*/
 	#editor-title {
 		width:100vw;
 		height:4em;
@@ -45,10 +52,7 @@ html, body {
 		background-color:#fff;
 		overflow:hidden;
 		text-align:center;
-		color:#f8f8f8;
-		box-shadow:0 0 4px #484848;
-		/*border-top:0.25px solid #484848;
-		border-bottom:0.25px solid #484848;*/
+		box-shadow:0 0 10px #484848;
 	}
 
 	#edit-title-top {
@@ -72,819 +76,161 @@ html, body {
 		display:none;
 	}
 
-	/*Editor Section*/
+	/*------------------------------
+
+	--interior editor div--
+
+	This is where the options for the 
+	editor will be displayed
+	------------------------------*/
 	#editor {
 		width:100vw;
 		height:100vh;
+		background-color:#fff;
 		overflow-x:hidden;
 		overflow-y:scroll;
+		position:absolute;
+		top:0em;
 	}
 
-	#in-edit {
-		width:100%;
+	#interior-edit {
+		width:100vw;
 		height:auto;
-		padding-top:4em;
-		border-bottom:0.25px solid #000;
+		margin-bottom:4em;
+		border-top:0.15px solid #484848;
+		border-bottom:0.15px solid #484848;
+		margin-top:4em;
 	}
 
-	.editorSec {
-		width:140vw;
-		height:4em;
-		overflow:hidden;
-		margin-left:0em;
-		transition:all 0.5s ease;
-	}
-
-	.editorTitle {
-		width:140vw;
-		height:4em;
-		overflow:hidden;
-		position:relative;
-		border-top:0.25px solid #000;
-		border-bottom:0.25px solid #000;
-	}
-
-	.editTitle {
-		text-align:center;
-		color:#080808;
+	/*-----Option sections-----*/
+	.editor-option {
 		width:100vw;
 		height:4em;
 		overflow:hidden;
-		float:left;
-		margin-left:0em;
+		background-color:#fff;
+		border-top:0.15px solid #484848;
+		border-bottom:0.15px solid #484848;
+		-webkit-tap-highlight-color: rgba(0,0,0,0); 
+	}
+
+	.editor-interior-option-section {
+		height:4em;
+		width:calc(100vw + 8em);
+		background-color:#fff;
 		position:relative;
+		margin-left:0em;
+		transition:all 0.75s ease;
+		-webkit-tap-highlight-color: rgba(0,0,0,0); 
+	}
+
+	.edit-title-card {
+		width:100vw;
+		height:4em;
+		background-color:#fff;
+		text-align:center;
+		overflow:hidden;
+		-webkit-tap-highlight-color: rgba(0,0,0,0); 
+	}
+
+	.edit-title-card > h6 {
+		text-transform:uppercase;
+		font-weight:normal;
+		font-size:15px;
+		line-height:0px;
+		margin-top:2.25em;
 		-webkit-tap-highlight-color: rgba(0,0,0,0); 
 	}
 
 	.slide-open {
 		width:4em;
 		height:4em;
-		background-color:#f8f8f8;
+		background-color:#f3f3f3;
 		position:absolute;
-		z-index:1000;
-		left:calc(100vw - 4em);
 		top:0px;
+		right:calc(8em);
 		text-align:center;
+		overflow:hidden;
 		-webkit-tap-highlight-color: rgba(0,0,0,0); 
+	}
+
+	.use {
+		width:4em;
+		height:4em;
+		background-color:#00F6FF;
+		position:absolute;
+		top:0px;
+		right:calc(4em);
+		text-align:center;
+		overflow:hidden;
+		-webkit-tap-highlight-color: rgba(0,0,0,0); 
+	}
+
+	.learn {
+		width:4em;
+		height:4em;
+		background-color:#0CA6E8;
+		position:absolute;
+		top:0px;
+		right:0em;
+		text-align:center;
+		overflow:hidden;
+		-webkit-tap-highlight-color: rgba(0,0,0,0); 
+	}
+
+	.slide-open > img,
+	.use > img,
+	.learn > img {
+		margin-top:18px;
 	}
 
 	.slide-open > img {
-		margin-top:1.35em;
-		margin-left:0.25em;
+		margin-top:21px;
 	}
 
-	.editTitle > h6 {
-		text-transform:uppercase;
-		font-size:15px;
-		font-weight:normal;
-		margin-top:25px;
-	}
+	/*------------------------------
 
-	.use {
-		width:4em;
-		height:4em;
-		background-color:#00F6FF;
-		float:left;
-		position:absolute;
-		left:100vw;
-		text-align:center;
-		-webkit-tap-highlight-color: rgba(0,0,0,0); 
-	}
+	--Tools Editor--
 
-	.use > img {
-		margin-top:1.05em;
-	}
-
-	.learn {
-		width:4em;
-		height:4em;
-		background-color:#0CA6E8;
-		float:left;
-		position:absolute;
-		left:calc(100vw + 4em);
-		text-align:center;
-		-webkit-tap-highlight-color: rgba(0,0,0,0); 
-	}
-
-	.learn > img {
-		margin-top:1.05em;
-	}
-
-	/*Tools and editors*/
+	These are the tools used in for
+	the specific editing options. They
+	are displayed when the editing options
+	is chosen.
+	------------------------------*/
 	#toolsEditor {
-		width:100vw;
-		height:100vh;
-		overflow-x:hidden;
-		overflow-y:scroll;
-		background-color:#fff;
-		position:absolute;
-		z-index:100000;
-		top:-100vh;
-		left:0px;
-		transition:all 1s ease;
-	}
-
-	.tools {
-		width:100vw;
-		height:auto;
-		padding-top:4.5em;
-		padding-bottom:4em;
 		display:none;
-		overflow-x:hidden;
 	}
 
-	.sectools {
-		width:90vw;
-		height:3em;
-		margin-top:1em;
-		margin-left:5vw;
-		position:relative;
-		overflow:hidden;
-		transition:all 0.75s ease;
-		-webkit-tap-highlight-color: rgba(0,0,0,0); 
-	}
+	/*------------------------------
 
-	.head-section {
-		width:100%;
-		height:3em;
-		position:relative;
-		overflow:hidden;
-		box-shadow:inset 0 0 0 1px #000;
-		background-color:#f3f3f3;
-		text-align:center;
-	}
+	--Menu Options--
 
-	.close-div {
-		width:100%;
-		height:3em;
-		position:absolute;
-		z-index:100000;
-		top:0px;
-		left:0px;
-		display:none;
-		background-color:transparent;
-	}
-
-	.sectoolstitle {
-		color:#080808;
-		height:100%;
-		font-size:15px;
-		text-align:center;
-		overflow:hidden;
-		text-transform:uppercase;
-		margin-top:16px;
-		cursor:default;
-	}
-
-	.edit-area {
-		width:90vw;
-		height:auto;
-	}
-
-	/*Background Editor*/
-	#background {
-		width:100%;
-		height:15em;
-		overflow-y:hidden;
-		overflow-x:scroll;
-	}
-
-	#background-in {
-		width:90vw;
-		height:15em;
-	}
-
-	.back {
-		width:90vw;
-		height:15em;
-		background-repeat:no-repeat;
-		background-position:center center;
-		background-size:cover;
-	}
-
-	#first-back {
-		background-image:url("../img/hotel_1.jpg");
-	}
-
-	#selection {
-		width:100%;
-		height:15em;
-		overflow:hidden;
-		background-color:#f3f3f3;
-		position:relative;
-	}
-
-	#color-select {
-		width:100%;
-		height:15em;
-		background-color:#f3f3f3;
-		position:absolute;
-		z-index:100000;
-		top:0px;
-		left:-90vw;
-		overflow-y:hidden;
-		overflow-x:scroll;
-		transition:all 0.75s ease;
-	}
-
-	#in-color-select {
-		height:15em;
-		width:calc(7.5em * 6);
-	}
-
-	.in-color {
-		width:7.5em;
-		height:7.5em;
-		float:left;
-	}
-
-	#img-select {
-		width:100%;
-		height:15em;
-		background-color:#f3f3f3;
-		position:absolute;
-		z-index:100000;
-		top:0px;
-		left:-90vw;
-		overflow-y:hidden;
-		overflow-x:hidden;
-		transition:all 0.75s ease;
-	}
-
-	#in-img-select {
-		height:15em;
-		width:calc(90vw * 6);
-		transition:all 0.5s ease;
-	}
-
-	.imgs-to-sel {
-		height:15em;
-		width:90vw;
-		float:left;
-		background-repeat:no-repeat;
-		background-size:cover;
-		background-position:center center;
-		box-shadow:inset 0 0 0 1px #000;
-		position:relative;
-	}
-
-	.select-img {
-		width:1.5em;
-		height:1.5em;
-		border:2px dashed #fff;
-		position:absolute;
-		top:1em;
-		right:1em;
-		border-radius:50%;
-	}
-
-	#backcolorsel {
-		width:80vw;
-		height:6em;
-		box-shadow:inset 0 0 0 1px #080808;
-		margin-left:5vw;
-		margin-top:1em;
-		overflow:hidden;
-		text-align:center;
-		transition:all 0.75s ease;
-	}
-
-	#backgroundimgsel {
-		width:80vw;
-		height:6em;
-		box-shadow:inset 0 0 0 1px #080808;
-		margin-left:5vw;
-		margin-top:1em;
-		overflow:hidden;
-		text-align:center;
-		transition:all 0.75s ease;
-	}
-
-	#backcolorsel > h3, #backgroundimgsel > h3 {
-		color:#484848;
-		padding:5px 15px;
-		text-transform:uppercase;
-		font-size:15px;
-		font-weight:normal;
-		border:2px solid #484848;
-		width:12em;
-		margin:auto;
-		margin-top:2.1em;
-	}
-
-	#count {
-		width:100%;
-		height:4em;
-		background-color:#f3f3f3;
-		overflow:hidden;
-		position:relative;
-	}
-
-	#up-count {
-		width:20%;
-		height:4em;
-		float:left;
-		margin-left:20%;
-	}
-
-	#change-up-count {
-		margin-left:28%;
-		margin-top:23%;
-		overflow:hidden;
-		text-align:center;
-	}
-
-	#change-up-count > img {
-		margin-top:23%;
-	}
-
-	#back-count {
-		width:20%;
-		height:100%;
-		overflow:hidden;
-		text-align:center;
-		float:left;
-	}
-
-	#back-count > h3 {
-		font-size:20px;
-		font-weight:normal;
-		color:#484848;
-	}
-
-	#down-count {
-		width:20%;
-		height:4em;
-		float:left;
-	}
-
-	#change-down-count {
-		margin-left:28%;
-		margin-top:23%;
-		overflow:hidden;
-		text-align:center;
-	}
-
-	#change-down-count > img {
-		margin-top:23%;
-	}
-
-	#animation {
-		width:100%;
-		height:15em;
-		background-color:#f3f3f3;
-		overflow:hidden;
-		text-align:center;
-		margin-bottom:1em;
-	}
-
-	/*Icon Editor*/
-	#icon-prev {
-		width:100%;
-		height:auto;
-		padding-top:1em;
-		padding-bottom:1em;
-		background-color:#f3f3f3;
-		text-align:center;
-	}
-
-	#icon-size {
-		width:100%;
-		height:auto;
-		background-color:#f3f3f3;
-		overflow:hidden;
-		padding-top:1em;
-		padding-bottom:1em;
-	}
-
-	#in-icon {
-		height:auto;
-		width:80%;
-		margin-left:10%;
-		display:flex;
-		justify-content:space-between;
-		overflow:hidden;
-	}
-
-	#small {
-		width:2.5em;
-		height:2.5em;
-		border-radius:15px;
-		border:2px dashed #484848;
-		margin-top:1em;
-	}
-
-	#medium {
-		width:3.5em;
-		height:3.5em;
-		border-radius:15px;
-		margin-top:0.5em;
-		border:2px dashed #484848;
-	}
-
-	#large {
-		width:4.5em;
-		height:4.5em;
-		border-radius:15px;
-		border:2px dashed #484848;
-	}
-
-	/*Title Editor*/
-	#title {
-		width:100%;
-		height:auto;
-		overflow:hidden;
-		text-align:center;
-		background-image:url("../img/hotel_1.jpg");
-		background-repeat:no-repeat;
-		background-position:center center;
-		padding-top:1.05em;
-		padding-bottom:1.05em;
-	}
-
-	#pre-title {
-		text-transform:uppercase;
-		font-weight:normal;
-		font-size:18px;
-		margin-top:5.25%;
-		color:#ffffff;
-		width:13em;
-		border:2px solid #ffffff;
-		padding-top:5px;
-		padding-bottom:5px;
-		margin:auto;
-	}
-
-	#change-title {
-		width:100%;
-		height:auto;
-		padding-top:1.5em;
-		padding-bottom:1.5em;
-		overflow:hidden;
-		text-align:center;
-		background-color:#f3f3f3;
-	}
-
-	#change-title-text {
-		width:75%;
-		height:1.75em;
-		outline:none;
-		text-align:center;
-		font-size:16px;
-		margin:auto;
-		text-transform:uppercase;
-		border:0.25px solid #484848;
-	}
-
-	#font-size {
-		width:100%;
-		height:4em;
-		background-color:#f3f3f3;
-		overflow:hidden;
-		text-align:center;
-	}
-
-	#font-pre {
-		width:20%;
-		height:100%;
-		overflow:hidden;
-		text-align:center;
-		float:left;
-	}
-
-	#font-pre > h3 {
-		font-size:20px;
-		font-weight:normal;
-		color:#484848;
-	}
-
-	#change-up-size {
-		width:20%;
-		height:100%;
-		float:left;
-		overflow:hidden;
-		margin-left:20%;
-	}
-
-	#change-up {
-		margin-left:28%;
-		margin-top:23%;
-	}
-
-	#change-down-size {
-		width:20%;
-		height:100%;
-		float:left;
-		overflow:hidden;
-	}
-
-	#change-down {
-		margin-left:28%;
-		margin-top:23%;
-	}
-
-	.move-count {
-		width:2em;
-		height:2em;
-		border-radius:50%;
-		box-shadow:0 0 3px #484848;
-		float:left;
-		margin-top:11%;
-		background-color:#efefef;
-		overflow:hidden;
-		text-align:center;
-		-webkit-tap-highlight-color: rgba(0,0,0,0); 
-	}
-
-	#font-family {
-		width:100%;
-		height:5em;
-		background-color:#f3f3f3;
-		overflow:hidden;
-		text-align:center;
-	}
-
-	#font-color {
-		width:100%;
-		height:6em;
-		background-color:#f3f3f3;
-		overflow:hidden;
-		text-align:center;
-	}
-
-	/*Date Editor*/
-	#date-preview {
-		width:100%;
-		height:8em;
-		background-color:#f3f3f3;
-		overflow:hidden;
-		text-align:center;
-	}
-
-	#date-setup {
-		width:100%;
-		height:auto;
-		padding-top:1em;
-		padding-bottom:1em;
-		overflow:hidden;
-		text-align:center;
-		background-color:#f3f3f3;
-	}
-
-	#single-date, #multiple-dates {
-		padding:5px;
-		outline:none;
-		background-color:transparent;
-		color:#484848;
-		border:3px solid #484848;
-		font-size:16px;
-		text-transform:uppercase;
-	}
-
-	#single-date {
-		background-color:#484848;
-		color:#f3f3f3;
-	}
-
-	#single-date:hover, #multiple-dates:hover {
-		background-color:#484848;
-		color:#f3f3f3;
-	}
-
-	#sdsect {
-		transition:all 0.75s ease;
-	}
-
-	#stdtsect, #endtsect, #bttxtsect {
-		margin-left:-100vw;
-		transition:all 0.75s ease;
-	}
-
-	/*Selection Button*/
-	#selection-buttons {
+	This is the bottom menu options 
+	like the close, save, publish, 
+	menu, and settings options, this 
+	is in the #editor-ext div
+	------------------------------*/
+	#editor-menu-buttons {
 		width:100vw;
-		height:4em;
-		position:absolute;
-		z-index:100000000;
-		bottom:0px;
-		left:0px;
+		height:3em;
 		background-color:#fff;
-		outline:none;
-	}
-
-	.selection {
-		width:20vw;
-		height:4em;
-		float:left;
-		text-align:center;
-		overflow:hidden;
-	}
-
-	.selection > img {
-		margin-top:1.25em;
-	}
-
-}
-
-@media only screen and (max-width:768px) and (min-width:426px) {
-
-	/*This is the editor*/
-	#editor-ext {
-		width:100vw;
-		height:100vh;
-		background-color:rgba(255,255,255,0.3);
-		overflow:hidden;
-	}
-
-	.editor {
-		width:100vw;
-		height:100vh;
-		overflow-y:scroll;
-		overflow-x:hidden;
-	}
-
-	#in-edit {
-		width:100vw;
-		height:auto;
-		border-top:1px solid #000;
-		border-bottom:1px solid #000;
-	}
-
-	.editorSec {
-		width:160vw;
-		height:6em;
-		overflow:hidden;
-		border:1px solid #000;
-		transition:all 0.75s ease;
-	}
-
-	.editorTitle {
-		width:160vw;
-		height:6em;
-		position:relative;
-		overflow:hidden;
-		transition:all 0.75s ease;
-	}
-
-	.editTitle {
-		width:100vw;
-		height:100vh;
-		background-color:#fff;
-		text-align:center;
-		overflow:hidden;
-		color:#080808;
-	}
-
-	.editTitle > h6 {
-		text-transform:uppercase;
-		font-weight:normal;
-		margin-top:38px;
-		font-size:18px;
-	}
-
-	.slide-open {
-		width:6em;
-		height:6em;
-		position:absolute;
-		z-index:100000;
-		cursor:pointer;
-		top:0px;
-		background-color:#f3f3f3;
-		left:calc(100vw - 6em);
-	}
-
-	.use {
-		width:6em;
-		height:6em;
+		border-top:0.25px solid #484848;
 		position:absolute;
 		z-index:10000;
-		top:0px;
-		left:100vw;
-		background-color:#00F6FF;
-	}
-
-	.learn {
-		width:6em;
-		height:6em;
-		position:absolute;
-		z-index:10000;
-		top:0px;
-		left:calc(100vw + 6em);
-		background-color:#0CA6E8;
-	}
-
-	/*These are the tools editor*/
-	#toolsEditor {
-		width:100vw;
-		height:100vh;
-		background-color:#fff;
-		position:absolute;
-		z-index:1000000;
-		top:-100vh;
-		left:0px;
-		overflow-x:hidden;
-		overflow-y:scroll;
-		transition:all 0.75s ease;
-
-	}
-
-	.tools {
-		width:100%;
-		height:auto;
-		display:none;
-	}
-
-	.sectools {
-		width:90vw;
-		height:4em;
-		overflow:hidden;
-		margin:auto;
-		margin-top:1em;
-	}
-
-	.sectools:last-child {
-		margin-bottom:5em;
-	}
-
-	.head-section {
-		width:90vw;
-		height:4em;
-		position:relative;
-		overflow:hidden;
-		box-shadow:inset 0 0 0 1px #000;
-		background-color:#f3f3f3;
-		text-align:center;
-	}
-
-	#up {
-		position:absolute;
-		z-index:10000000;
-		top:0px;
-		right:0px;
-	}
-
-	.sectoolstitle {
-		font-size:18px;
-		margin-top:22px;
-	}
-
-	.edit-area {
-		width:100%;
-		height:auto;
-		background-color:#f3f3f3;
-		position:relative;
-	}
-
-	/*background tools*/
-	#background {
-		width:100%;
-		height:25em;
-		background-size:cover;
-		background-repeat:no-repeat;
-		background-position:center center;
-	}
-
-	#count {
-		width:100%;
-		height:12em;
-	}
-
-	#selection {
-		width:100%;
-		height:20em;
-	}
-
-	#animation {
-		width:100%;
-		height:20em;
-	}
-
-	/*Selection Buttons*/
-	#selection-buttons {
-		width:100vw;
-		height:4em;
-		background-color:#fff;
-		position:absolute;
-		z-index:100000000;
 		bottom:0px;
 		left:0px;
 	}
 
-	.selection {
+	.editor-menu {
 		width:20vw;
-		height:4em;
-		float:left;
+		height:3em;
 		text-align:center;
+		float:left;
+		background-color:#fff;
+		box-shadow:inset 0 0 0 0.6px #484848;
 	}
 
-	.selection > img {
-		margin-top:15px;
+	.editor-menu > img {
+		margin-top:13px;
 	}
 
 }
-
-@media only screen and (min-width:769px) {
-
-
-
-}	

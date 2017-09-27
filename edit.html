@@ -4,8 +4,10 @@
 	<head>
 	
 		<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<!--<meta name="theme-color" content="#008080">-->
 		<title>Full Screen Editor</title>
 		<link rel="stylesheet" type="text/css" href="css/editor.css">
+		<link rel="stylesheet" type="text/css" href="css/editorLand.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script
   src="https://code.jquery.com/jquery-1.11.2.js"
@@ -190,7 +192,7 @@
 										<div style="background-image:url('img/hotel_6.jpg')" class="imgs-to-sel">
 											
 											<div class="select-img"></div>
-											
+
 										</div>
 
 									</div>
@@ -226,586 +228,17 @@
 
 				</div>
 
-				<!--Icon Editor-->
-
-				<div class="tools">
-					
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Icon Image (Preview)</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="icon-prev">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Icon Selection</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="icon-selection">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Icon Size</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="icon-size">
-
-								<div id="in-icon">
-							
-									<div id="small"></div>
-
-									<div id="medium"></div>
-
-									<div id="large"></div>
-
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<!--Title-->
-
-				<div class="tools">
-					
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Title (Preview)</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="title">
-							
-								<h1 id="pre-title">Icon Convention</h1>
-
-								<div class="close-div"></div>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Change Title</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="change-title">
-							
-								<input type="text" name="change-title-text" id="change-title-text"/>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Font size</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="font-size">
-
-								<div id="change-up-size">
-
-									<div id="change-up" class="move-count"></div>
-
-								</div>
-							
-								<div id="font-pre">
-									
-									<h3 id="font-pre-text">18</h3>
-
-								</div>
-
-								<div id="change-down-size">
-
-									<div id="change-down" class="move-count"></div>
-
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Font Family</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="font-family">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Font Color</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="font-color">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<!--Date-->
-
-				<div class="tools">
-					
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Date (Preview)</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="date-preview">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Date Setup</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="date-setup">
-							
-								<button id="single-date">single date</button>
-
-								<button id="multiple-dates">multiple dates</button>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools" id="sdsect">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Single Date</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="single-date-edit">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools" id="stdtsect">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Start Date</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="start-date">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools" id="endtsect">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">End Date</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="end-date">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools" id="bttxtsect">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Between Text</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="between-text">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<!--Button-->
-
-				<div class="tools">
-					
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Button (Preview)</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="button-preview">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Button Text</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="button-text">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Button Background</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="button-back">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Button Border</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="button-border">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Font size</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="button-font-size">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Font Color</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="button-font-color">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Web Link</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="web-link">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<!--Shadow Box-->
-
-				<div class="tools">
-
-					<div id="create-shadow-box"></div>
-					
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Shadow Box (Preview)</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-							
-							<div id="shadow-box-preview">
-							
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Shadow Box Color</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-								
-							<div id="shadow-box-color">
-								
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Shadow Box Opacity</h1>
-
-						</div>
-
-						<div class="close-div"></div>
-
-						<div class="edit-area">
-								
-							<div id="shadow-box-opacity">
-								
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
 			</div>
 
 			<div id="editor">
 				
-				<div id="in-edit">
+				<div id="interior-edit">
 
-					<div class="editorSec" data-role="content">
+					<div class="editor-option" data-role="content">
 						
-						<div class="editorTitle">
+						<div class="editor-interior-option-section">
 							
-							<div class="editTitle">
+							<div class="edit-title-card">
 									
 								<h6>Background</h6>
 
@@ -830,11 +263,11 @@
 
 					</div>
 
-					<div class="editorSec" data-role="content">
+					<div class="editor-option" data-role="content">
 						
-						<div class="editorTitle">
+						<div class="editor-interior-option-section">
 							
-							<div class="editTitle">
+							<div class="edit-title-card">
 									
 								<h6>Icon Image</h6>
 
@@ -859,11 +292,11 @@
 
 					</div>
 
-					<div class="editorSec" data-role="content">
+					<div class="editor-option" data-role="content">
 						
-						<div class="editorTitle">
+						<div class="editor-interior-option-section">
 							
-							<div class="editTitle">
+							<div class="edit-title-card">
 									
 								<h6>Title</h6>
 
@@ -888,11 +321,11 @@
 
 					</div>
 
-					<div class="editorSec" data-role="content">
+					<div class="editor-option" data-role="content">
 						
-						<div class="editorTitle">
+						<div class="editor-interior-option-section">
 							
-							<div class="editTitle">
+							<div class="edit-title-card">
 									
 								<h6>Date</h6>
 
@@ -917,11 +350,11 @@
 
 					</div>
 
-					<div class="editorSec" data-role="content">
+					<div class="editor-option" data-role="content">
 						
-						<div class="editorTitle">
+						<div class="editor-interior-option-section">
 							
-							<div class="editTitle">
+							<div class="edit-title-card">
 									
 								<h6>Button</h6>
 
@@ -946,11 +379,11 @@
 
 					</div>
 
-					<div class="editorSec" data-role="content">
+					<div class="editor-option" data-role="content">
 						
-						<div class="editorTitle">
+						<div class="editor-interior-option-section">
 							
-							<div class="editTitle">
+							<div class="edit-title-card">
 									
 								<h6>Shadow Box</h6>
 
@@ -979,31 +412,31 @@
 
 			</div>
 
-			<div id="selection-buttons">
+			<div id="editor-menu-buttons">
 				
-				<div class="selection">
+				<div class="editor-menu">
 					
-					<img src="img/closeButton.png" width="auto" height="30px"/>
+					<img src="img/closeButton.png" width="auto" height="25px"/>
 
 				</div>
-				<div class="selection">
+				<div class="editor-menu">
 				
-					<img src="img/gearn.png" width="auto" height="30px"/>
+					<img src="img/gearn.png" width="auto" height="25px"/>
 
 				</div>
-				<div class="selection">
+				<div class="editor-menu">
 					
-					<img src="img/save.png" width="auto" height="30px"/>
+					<img src="img/save.png" width="auto" height="25px"/>
 
 				</div>
-				<div class="selection">
+				<div class="editor-menu">
 					
-					<img src="img/publish.png" width="auto" height="30px"/>
+					<img src="img/publish.png" width="auto" height="25px"/>
 
 				</div>
-				<div class="selection">
+				<div class="editor-menu">
 					
-					<img src="img/menu.png" width="auto" height="30px"/>
+					<img src="img/menu.png" width="auto" height="25px"/>
 
 				</div>
 
