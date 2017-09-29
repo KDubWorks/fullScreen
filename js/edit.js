@@ -124,6 +124,39 @@ if(winW > winH) {
 
 	});
 
+	/*This will open the individual section tools by clicking
+	the acutal head section*/
+	var headSection = $(".head-section");
+	var headSectionA = new Array();
+
+	var openIndicator = $(".open-indicator");
+	var openIndicatorA = new Array();
+
+	var secTool = $(".sectools");
+
+	fillArray(headSectionA, headSection);
+	fillArray(openIndicatorA, openIndicator);
+
+	for(var i = 0; i < headSection.length; i++) {
+		$(headSection[i]).on("tap", function() {
+
+			var n = headSectionA.indexOf(this);
+
+			$(secTool[n]).css("height", "auto");
+
+		});
+	}
+
+	for(var i = 0; i < openIndicator.length; i++) {
+		$(openIndicator[i]).on("tap", function() {
+
+			var n = openIndicatorA.indexOf(this);
+
+			$(secTool[n]).css("height", "auto");
+
+		});
+	}
+
 	/*This will open the learn section*/
 	var learn = $(".learn");
 	var learnA = new Array();
@@ -139,13 +172,15 @@ if(winW > winH) {
 	//editor options
 	var editorOption = $(".editor-option");
 
+	//This is the learnDesc
+	var learnDesc = $(".learn-desc");
+
 	for(var i = 0; i < learn.length; i++) {
 		$(learn[i]).on("tap", function() {
 
 			var n = learnA.indexOf(this);
+			$(editorInterior[n]).css("margin-left", "-12em");
 			$(editorOption[n]).css("height", "auto");
-			$(closeLearn[n]).css("display", "block");
-
 
 		});
 	}
@@ -154,8 +189,8 @@ if(winW > winH) {
 		$(closeLearn[i]).on("tap", function() {
 
 			var n = closeLearnA.indexOf(this);
+			$(editorInterior[n]).css("margin-left", "-8em");
 			$(editorOption[n]).css("height", "4em");
-			$(closeLearn[n]).css("display", "none");
 
 		});
 	}
