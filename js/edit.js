@@ -132,10 +132,14 @@ if(winW > winH) {
 	var openIndicator = $(".open-indicator");
 	var openIndicatorA = new Array();
 
+	var closeIndicator = $(".close-indicator");
+	var closeIndicatorA = new Array();
+
 	var secTool = $(".sectools");
 
 	fillArray(headSectionA, headSection);
 	fillArray(openIndicatorA, openIndicator);
+	fillArray(closeIndicatorA, closeIndicator);
 
 	for(var i = 0; i < headSection.length; i++) {
 		$(headSection[i]).on("tap", function() {
@@ -143,6 +147,8 @@ if(winW > winH) {
 			var n = headSectionA.indexOf(this);
 
 			$(secTool[n]).css("height", "auto");
+			$(closeIndicator[n]).css("display", "block");
+			$(openIndicator[n]).css("display", "none");
 
 		});
 	}
@@ -153,6 +159,8 @@ if(winW > winH) {
 			var n = openIndicatorA.indexOf(this);
 
 			$(secTool[n]).css("height", "auto");
+			$(closeIndicator[n]).css("display", "block");
+			$(openIndicator[n]).css("display", "none");
 
 		});
 	}
