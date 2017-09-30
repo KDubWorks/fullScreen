@@ -220,6 +220,8 @@ if(winW > winH) {
 
 			$(editorMenu[0]).on("tap", function() {
 
+				var editorImg = $(editorMenu[0]).children();
+				editorImg[0].setAttribute("src", "img/closeButton.png");
 				$("#editor-ext").css("height", "100vh");
 				open = 1;
 				closeEditor(open);
@@ -236,6 +238,8 @@ if(winW > winH) {
 
 			$(editorMenu[0]).on("tap", function() {
 
+				var editorImg = $(editorMenu[0]).children();
+				editorImg[0].setAttribute("src", "img/power.png");
 				$("#editor-ext").css("height", "0vh");
 				open = 0;
 				openEditor(open);
