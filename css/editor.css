@@ -482,6 +482,10 @@ html, body {
 
 	These are the title editor tools
 	-----------------------------*/
+
+	/*------------------------------
+	----These is the title editor preview----
+	------------------------------*/
 	#title-preview {
 		width:90vw;
 		height:auto;
@@ -492,6 +496,9 @@ html, body {
 		text-align:center;
 	}
 
+	/*------------------------------
+	----These is the title edit section----
+	------------------------------*/
 	#title-edit {
 		width:90vw;
 		height:auto;
@@ -502,6 +509,9 @@ html, body {
 		text-align:center;
 	}
 
+	/*------------------------------
+	----These is the font color----
+	------------------------------*/
 	#font-color {
 		width:90vw;
 		height:auto;
@@ -512,6 +522,9 @@ html, body {
 		text-align:center;
 	}
 
+	/*------------------------------
+	----These is the font size----
+	------------------------------*/
 	#font-size {
 		width:90vw;
 		height:auto;
@@ -522,6 +535,9 @@ html, body {
 		text-align:center;
 	}
 
+	/*------------------------------
+	----These is the font family----
+	------------------------------*/
 	#font-family {
 		width:90vw;
 		height:auto;
@@ -533,8 +549,144 @@ html, body {
 	}
 
 	/*------------------------------
-	----These is the icon image preview----
-	------------------------------*/	
+	----These is the title border----
+	------------------------------*/
+	#title-border {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	/*-----------------------------
+
+	-----Date Editor-----
+
+	These are the title editor tools
+	-----------------------------*/
+
+	/*------------------------------
+	----These is the date editor preview----
+	------------------------------*/
+	#date-preview {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	/*------------------------------
+	----These is the date setup----
+	------------------------------*/
+	#date-setup {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#date-setup-in {
+		width:58vw;
+		height:auto;
+		display:flex;
+		justify-content:space-between;
+		margin:auto;
+	}
+
+	.button-setup {
+		padding:5px;
+		border:2px solid #484848;
+		background-color:transparent;
+		color:#484848;
+		font-weight:normal;
+		outline:none;
+		font-size:17px;
+	}
+
+	/*------------------------------
+	----These is the single date editor----
+	------------------------------*/
+	#single-date-section {
+		width:90vw;
+		height:3em;
+		overflow:hidden;
+		box-shadow:0 0 4px #484848;
+		position:relative;
+		margin-top:1em;
+		margin-left:5vw;
+		transition:all 0.75s ease;
+	}
+
+	#single-date {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#single-date-button {
+		background-color:#484848;
+		color:#f3f3f3;
+	}
+
+	/*------------------------------
+	----These is the multiple date editor----
+	------------------------------*/
+	.multiple-dates {
+		width:90vw;
+		height:3em;
+		overflow:hidden;
+		box-shadow:0 0 4px #484848;
+		position:relative;
+		margin-top:1em;
+		margin-left:-100vw;
+		transition:all 0.75s ease;
+	}
+
+	/*----first date setup----*/
+	#first-date-setup {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	/*----end date setup----*/
+	#end-date-setup {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	/*----this is the between text----*/
+	#between-setup {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
 
 	/*This close div is for tab based close interaction 
 	of the specific tools*/

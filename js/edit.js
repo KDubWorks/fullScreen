@@ -188,6 +188,83 @@ if(winW > winH) {
 		});
 	}
 
+	/*These are the specific tools for the date setup*/
+
+	/*This is the multipe dates section, this opens the single date*/
+	var multipleDates = $(".multiple-dates");
+
+	$("#single-date-button").on("tap", function() {
+
+		$("#single-date-button").css("background-color", "#484848");
+		$("#single-date-button").css("color", "#f3f3f3");
+
+		$("#multiple-dates").css("background-color", "transparent");
+		$("#multiple-dates").css("color", "#484848");
+
+		$(multipleDates[0]).css("margin-left", "-100vw");
+
+		setTimeout(function() {
+
+			$(multipleDates[1]).css("margin-left", "-100vw");
+
+		}, 25);
+
+		setTimeout(function() {
+
+			$(multipleDates[2]).css("margin-left", "-100vw");
+
+		}, 50);
+
+		setTimeout(function() {
+
+			$("#single-date-section").css("display", "block");
+
+		}, 800);
+
+		setTimeout(function() {
+
+			$("#single-date-section").css("margin-left", "5vw");
+
+		}, 820);
+
+	});
+
+	$("#multiple-dates").on("tap", function() {
+
+		$("#multiple-dates").css("background-color", "#484848");
+		$("#multiple-dates").css("color", "#f3f3f3");
+		
+		$("#single-date-button").css("background-color", "transparent");
+		$("#single-date-button").css("color", "#484848");
+
+		$("#single-date-section").css("margin-left", "-100vw");
+
+		setTimeout(function() {
+
+			$("#single-date-section").css("display", "none");
+
+		}, 810);
+
+		setTimeout(function() {
+
+			$(multipleDates[0]).css("margin-left", "5vw");
+
+		}, 820);
+
+		setTimeout(function() {
+
+			$(multipleDates[1]).css("margin-left", "5vw");
+
+		}, 830);
+
+		setTimeout(function() {
+
+			$(multipleDates[2]).css("margin-left", "5vw");
+
+		}, 840);
+
+	});
+
 	/*This will close the individual section tools by clicking
 	the acutal head section or close indicator*/
 	for(var i = 0; i < closeIndicator.length; i++) {
