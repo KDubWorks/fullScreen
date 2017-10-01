@@ -188,6 +188,16 @@ if(winW > winH) {
 		});
 	}
 
+	/*This is to open title edit*/
+	$("#title-edit-sec-head").on("tap", function() {
+
+		setTimeout(function() {
+			$("#title-changer").focus();
+			$("#title-changer").css("bottom", "5px");
+		}, 200);
+
+	});
+
 	/*These are the specific tools for the date setup*/
 
 	/*This is the multipe dates section, this opens the single date*/
