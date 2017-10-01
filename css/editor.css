@@ -654,6 +654,17 @@ html, body {
 		text-align:center;
 	}
 
+	#date-already {
+		color:#fff;
+		font-weight:normal;
+		text-transform:uppercase;
+		padding:5px 15px;
+		border:5px solid #fff;
+		width:12em;
+		margin:auto;
+		text-align:center;
+	}
+
 	/*------------------------------
 	----These is the date setup----
 	------------------------------*/

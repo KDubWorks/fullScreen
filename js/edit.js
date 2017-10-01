@@ -201,6 +201,15 @@ if(winW > winH) {
 	/*These are the specific tools for the date setup*/
 
 	/*This is the multipe dates section, this opens the single date*/
+	/*This will get the date when the page is loaded*/
+	$(window).on("load", function() {
+
+		var dateSel = document.getElementById("date-area").innerHTML;
+
+		document.getElementById("date-already").innerHTML = dateSel;
+
+	});
+
 	var multipleDates = $(".multiple-dates");
 
 	$("#single-date-button").on("tap", function() {
