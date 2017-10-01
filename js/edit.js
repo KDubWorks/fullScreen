@@ -265,13 +265,49 @@ if(winW > winH) {
 
 	});
 
-	$(".check").on("tap", function() {
+	var checkO = 0;
 
-		var checkImg = $(".check").children();
+	function openCheck(o) {
 
-		$(checkImg[0]).css("display", "block");
+		if(o == 0) {
 
-	});
+			$(".check").on("tap", function() {
+
+				var checkImg = $(".check").children();
+
+				$(checkImg[0]).css("display", "block");
+
+				checkO = 1;
+
+				closeCheck(checkO);
+
+			});
+
+		}
+
+	}
+
+	function closeCheck(c) {
+
+		if(c == 1) {
+
+			$(".check").on("tap", function() {
+
+				var checkImg = $(".check").children();
+
+				$(checkImg[0]).css("display", "none");
+
+				checkO = 0;
+
+				openCheck(checkO);
+
+			});
+
+		}
+
+	}
+
+	openCheck(checkO);
 
 	/*This will close the individual section tools by clicking
 	the acutal head section or close indicator*/
