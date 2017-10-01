@@ -159,7 +159,7 @@ if(winW > winH) {
 				$(openIndicator[n]).css("display", "none");
 				$(closeDiv[n]).css("display", "block");
 
-			}, 20);
+			}, 100);
 
 		});
 	}
@@ -178,7 +178,7 @@ if(winW > winH) {
 				$(openIndicator[n]).css("display", "none");
 				$(closeDiv[n]).css("display", "block");
 
-			}, 20);
+			}, 100);
 
 		});
 	}
@@ -199,7 +199,7 @@ if(winW > winH) {
 				$(openIndicator[n]).css("display", "block");
 				$(closeDiv[n]).css("display", "none");
 
-			}, 20);
+			}, 100);
 
 		});
 	}
@@ -218,7 +218,7 @@ if(winW > winH) {
 				$(openIndicator[n]).css("display", "block");
 				$(closeDiv[n]).css("display", "none");
 
-			}, 20);
+			}, 100);
 
 		});
 	}
