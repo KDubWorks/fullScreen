@@ -469,6 +469,10 @@ html, body {
 		overflow:hidden;
 	}
 
+	.close-div > img {
+		margin-top:14px;
+	}
+
 	/*------------------------------
 
 	--Menu Options--
