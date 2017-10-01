@@ -265,6 +265,14 @@ if(winW > winH) {
 
 	});
 
+	$(".check").on("tap", function() {
+
+		var checkImg = $(".check").children();
+
+		$(checkImg[0]).css("display", "block");
+
+	});
+
 	/*This will close the individual section tools by clicking
 	the acutal head section or close indicator*/
 	for(var i = 0; i < closeIndicator.length; i++) {
