@@ -474,7 +474,67 @@ html, body {
 		background-color:#dadada;
 		overflow:hidden;
 		text-align:center;
-	}	
+	}
+
+	/*-----------------------------
+
+	-----Title Editor-----
+
+	These are the title editor tools
+	-----------------------------*/
+	#title-preview {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#title-edit {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#font-color {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#font-size {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#font-family {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	/*------------------------------
+	----These is the icon image preview----
+	------------------------------*/	
 
 	/*This close div is for tab based close interaction 
 	of the specific tools*/
