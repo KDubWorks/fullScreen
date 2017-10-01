@@ -248,6 +248,7 @@ html, body {
 		height:auto;
 		padding-top:4em;
 		padding-bottom:4em;
+		display:none;
 	}
 
 	/*This is the specific tools for each section*/

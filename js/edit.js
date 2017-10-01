@@ -100,6 +100,8 @@ if(winW > winH) {
 	var use = $(".use");
 	var useA = new Array();
 
+	var tools = $(".tools");
+
 	fillArray(useA, use);
 
 	for(var i = 0; i < use.length; i++) {
@@ -113,6 +115,8 @@ if(winW > winH) {
 
 			var n = useA.indexOf(this);
 
+			$(tools[n]).css("display", "block");
+
 		});
 	}
 
@@ -121,6 +125,7 @@ if(winW > winH) {
 
 		$("#toolsEditor").css("top", "-100vh");
 		$(this).css("display", "none");
+		$(tools).css("display", "none");
 
 	});
 
