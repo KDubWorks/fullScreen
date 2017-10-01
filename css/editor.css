@@ -496,6 +496,16 @@ html, body {
 		text-align:center;
 	}
 
+	#title-preview > h3 {
+		width:10em;
+		padding:5px 15px;
+		color:#fff;
+		border:5px solid #fff;
+		margin:auto;
+		font-weight:normal;
+		text-transform:uppercase;
+	}
+
 	/*------------------------------
 	----These is the title edit section----
 	------------------------------*/
