@@ -688,6 +688,106 @@ html, body {
 		text-align:center;
 	}
 
+	/*-----------------------------
+
+	-----Button Editor-----
+
+	This is the button editor
+	-----------------------------*/
+
+	/*------------------------------
+	----These is the button preview---
+	------------------------------*/
+	#button-preview {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#button-text {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#button-border {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#border-back {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#border-font-color {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#web-link {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	/*-----------------------------
+
+	-----Shadow Box Editor-----
+
+	This will edit the shadow box
+	-----------------------------*/
+
+	/*------------------------------
+	----These is the shadow box setup----
+	------------------------------*/
+	#shadow-box-setup {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#shadow-back-color {
+		width:90vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
 	/*This close div is for tab based close interaction 
 	of the specific tools*/
 	.close-div {
