@@ -151,11 +151,12 @@ if(winW > winH) {
 			var n = headSectionA.indexOf(this);
 
 			$(secTool[n]).css("height", "auto");
-			$(closeIndicator[n]).css("display", "block");
-			$(openIndicator[n]).css("display", "none");
+			openIndicator[n].setAttribute("src", "img/closeUp.png");
 
 			setTimeout(function() {
 
+				$(closeIndicator[n]).css("display", "block");
+				$(openIndicator[n]).css("display", "none");
 				$(closeDiv[n]).css("display", "block");
 
 			}, 20);
@@ -169,11 +170,12 @@ if(winW > winH) {
 			var n = openIndicatorA.indexOf(this);
 
 			$(secTool[n]).css("height", "auto");
-			$(closeIndicator[n]).css("display", "block");
-			$(openIndicator[n]).css("display", "none");
+			openIndicator[n].setAttribute("src", "img/closeUp.png");
 
 			setTimeout(function() {
 
+				$(closeIndicator[n]).css("display", "block");
+				$(openIndicator[n]).css("display", "none");
 				$(closeDiv[n]).css("display", "block");
 
 			}, 20);
@@ -189,11 +191,12 @@ if(winW > winH) {
 			var n = closeIndicatorA.indexOf(this);
 
 			$(secTool[n]).css("height", "3em");
-			$(closeIndicator[n]).css("display", "none");
-			$(openIndicator[n]).css("display", "block");
+			closeIndicator[n].setAttribute("src", "open.png");
 
 			setTimeout(function() {
 
+				$(closeIndicator[n]).css("display", "none");
+				$(openIndicator[n]).css("display", "block");
 				$(closeDiv[n]).css("display", "none");
 
 			}, 20);
@@ -207,11 +210,12 @@ if(winW > winH) {
 			var n = closeDivA.indexOf(this);
 
 			$(secTool[n]).css("height", "3em");
-			$(closeIndicator[n]).css("display", "none");
-			$(openIndicator[n]).css("display", "block");
+			closeIndicator[n].setAttribute("src", "open.png");
 
 			setTimeout(function() {
 
+				$(closeIndicator[n]).css("display", "none");
+				$(openIndicator[n]).css("display", "block");
 				$(closeDiv[n]).css("display", "none");
 
 			}, 20);
