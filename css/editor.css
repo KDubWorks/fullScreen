@@ -792,6 +792,20 @@ html, body {
 		text-align:center;
 	}
 
+	#button-to-change {
+		font-size:16px;
+		padding:5px 15px;
+		background-color:transparent;
+		outline:none;
+		color:#fff;
+		margin-top:0em;
+		border:5px solid #fff;
+		text-transform:uppercase;
+	}
+
+	/*------------------------------
+	----These is the button text editor----
+	------------------------------*/
 	#button-text {
 		width:90vw;
 		height:auto;
@@ -802,6 +816,32 @@ html, body {
 		text-align:center;
 	}
 
+	#button-text-area {
+		width:63vw;
+		height:3em;
+		margin:auto;
+		overflow:hidden;
+		border-bottom:1px solid #484848;
+		position:relative;
+	}
+
+	#button-text-changer {
+		width:100%;
+		background-color:transparent;
+		font-size:18px;
+		outline:none;
+		color:#484848;
+		position:absolute;
+		bottom:55px;
+		left:0px;
+		border:none;
+		box-shadow:none;
+		transition:all 0.5s ease;
+	}
+
+	/*------------------------------
+	----These is the button border editor----
+	------------------------------*/
 	#button-border {
 		width:90vw;
 		height:auto;
@@ -812,6 +852,19 @@ html, body {
 		text-align:center;
 	}
 
+	#choose-button-border {
+		padding:5px;
+		border:5px solid #484848;
+		font-weight:normal;
+		background-color:transparent;
+		outline:none;
+		font-size:16px;
+		text-transform:uppercase;
+	}
+
+	/*------------------------------
+	----These is the button background color----
+	------------------------------*/
 	#border-back {
 		width:90vw;
 		height:auto;
@@ -822,6 +875,9 @@ html, body {
 		text-align:center;
 	}
 
+	/*------------------------------
+	----These is the button font color----
+	------------------------------*/
 	#border-font-color {
 		width:90vw;
 		height:auto;
@@ -832,6 +888,40 @@ html, body {
 		text-align:center;
 	}
 
+	/*------------------------------
+	----These is the border font size----
+	------------------------------*/
+	#border-font-size {
+		width:90vw;
+		height:4em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#border-cur-font {
+		overflow:hidden;
+	}
+
+	#border-font-pre { 
+		margin-top:22px;
+ 	}
+
+	#border-font-up {
+		margin-left:15vw;
+	}
+
+	#border-font-up-change > img {
+		margin-top:8px;
+	}
+
+	#border-font-down-change > img {
+		margin-top:8.25px;
+	}
+
+	/*------------------------------
+	----These is the button web link----
+	------------------------------*/
 	#web-link {
 		width:90vw;
 		height:auto;
@@ -840,6 +930,29 @@ html, body {
 		background-color:#dadada;
 		overflow:hidden;
 		text-align:center;
+	}
+
+	#web-link-text-area {
+		width:63vw;
+		height:3em;
+		margin:auto;
+		overflow:hidden;
+		border-bottom:1px solid #484848;
+		position:relative;
+	}
+
+	#web-link-text-changer {
+		width:100%;
+		background-color:transparent;
+		font-size:18px;
+		outline:none;
+		color:#484848;
+		position:absolute;
+		bottom:55px;
+		left:0px;
+		border:none;
+		box-shadow:none;
+		transition:all 0.5s ease;
 	}
 
 	/*-----------------------------

@@ -328,6 +328,26 @@ if(winW > winH) {
 
 	openCheck(checkO);
 
+	/*This will open the button text section*/
+	$("#button-text-section").on("tap", function() {
+
+		setTimeout(function() {
+			$("#button-text-changer").focus();
+			$("#button-text-changer").css("bottom", "5px");
+		}, 200);
+
+	});
+
+	/*This will open the web link section*/
+	$("#web-link-section").on("tap", function() {
+
+		setTimeout(function() {
+			$("#web-link-text-area").focus();
+			$("#web-link-text-changer").css("bottom", "5px");
+		}, 200);
+
+	});
+
 	/*This will close the individual section tools by clicking
 	the acutal head section or close indicator*/
 	for(var i = 0; i < closeIndicator.length; i++) {
