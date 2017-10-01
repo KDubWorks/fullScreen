@@ -125,7 +125,7 @@ if(winW > winH) {
 	});
 
 	/*This will open the individual section tools by clicking
-	the acutal head section*/
+	the acutal head section or open indicator*/
 	var headSection = $(".head-section");
 	var headSectionA = new Array();
 
@@ -135,11 +135,15 @@ if(winW > winH) {
 	var closeIndicator = $(".close-indicator");
 	var closeIndicatorA = new Array();
 
+	var closeDiv = $(".close-div");
+	var closeDivA = new Array();
+
 	var secTool = $(".sectools");
 
 	fillArray(headSectionA, headSection);
 	fillArray(openIndicatorA, openIndicator);
 	fillArray(closeIndicatorA, closeIndicator);
+	fillArray(closeDivA, closeDiv);
 
 	for(var i = 0; i < headSection.length; i++) {
 		$(headSection[i]).on("tap", function() {
@@ -149,6 +153,12 @@ if(winW > winH) {
 			$(secTool[n]).css("height", "auto");
 			$(closeIndicator[n]).css("display", "block");
 			$(openIndicator[n]).css("display", "none");
+
+			setTimeout(function() {
+
+				$(closeDiv[n]).css("display", "block");
+
+			}, 20);
 
 		});
 	}
@@ -161,6 +171,50 @@ if(winW > winH) {
 			$(secTool[n]).css("height", "auto");
 			$(closeIndicator[n]).css("display", "block");
 			$(openIndicator[n]).css("display", "none");
+
+			setTimeout(function() {
+
+				$(closeDiv[n]).css("display", "block");
+
+			}, 20);
+
+		});
+	}
+
+	/*This will close the individual section tools by clicking
+	the acutal head section or close indicator*/
+	for(var i = 0; i < closeIndicator.length; i++) {
+		$(closeIndicator[i]).on("tap", function() {
+
+			var n = closeIndicatorA.indexOf(this);
+
+			$(secTool[n]).css("height", "3em");
+			$(closeIndicator[n]).css("display", "none");
+			$(openIndicator[n]).css("display", "block");
+
+			setTimeout(function() {
+
+				$(closeDiv[n]).css("display", "none");
+
+			}, 20);
+
+		});
+	}
+
+	for(var i = 0; i < closeDiv.length; i++) {
+		$(closeDiv[i]).on("tap", function() {
+
+			var n = closeDivA.indexOf(this);
+
+			$(secTool[n]).css("height", "3em");
+			$(closeIndicator[n]).css("display", "none");
+			$(openIndicator[n]).css("display", "block");
+
+			setTimeout(function() {
+
+				$(closeDiv[n]).css("display", "none");
+
+			}, 20);
 
 		});
 	}
