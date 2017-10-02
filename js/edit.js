@@ -188,7 +188,12 @@ if(winW > winH) {
 		});
 	}
 
-	/*This is to open title edit*/
+	/*----------------------------------------------
+	----------------------------------------------
+	This will be the code for the title editor tool
+	----------------------------------------------
+	----------------------------------------------*/
+	/*This is to open title editor tool*/
 	$("#title-edit-sec-head").on("tap", function() {
 
 		setTimeout(function() {
@@ -198,8 +203,93 @@ if(winW > winH) {
 
 	});
 
-	/*These are the specific tools for the date setup*/
+	/*This will change the font size tools*/
+	/*This will change the font size up*/
+	$("#font-up-change").on("tap", function() {
 
+		var fontPre = document.getElementById("font-pre").innerHTML;
+		var fontPreIng = parseInt(fontPre);
+		fontPreIng++;
+
+		if(fontPreIng < 31) {
+
+			document.getElementById("font-pre").innerHTML = fontPreIng;
+
+		}
+
+	});
+
+	/*This will change the font size down*/
+	$("#font-down-change").on("tap", function() {
+
+		var fontPre = document.getElementById("font-pre").innerHTML;
+		var fontPreIng = parseInt(fontPre);
+		fontPreIng--;
+
+		if(fontPreIng > 9) {
+
+			document.getElementById("font-pre").innerHTML = fontPreIng;
+
+		}
+
+	});
+
+	/*This is will change the border option for 
+	the text title*/
+	var borderO = 0;
+
+	/*This will open the options for the text border*/
+	function borderOn(o) {
+
+		if(o == 0) {
+
+			$("#border-button").on("tap", function() {
+
+				document.getElementById("border-button").innerHTML = "No Border";
+				$("#border-button").css("background-color", "#484848");
+				$("#border-button").css("color", "#f3f3f3");
+
+				$("#border-options").css("display", "block");
+
+				borderO = 1;
+				borderOff(borderO);
+
+			});
+
+		}
+
+	}
+
+	/*This will close the options for the text border*/
+	function borderOff(c) {
+
+		if(c == 1) {
+
+			$("#border-button").on("tap", function() {
+
+				document.getElementById("border-button").innerHTML = "Use Border";
+				$("#border-button").css("background-color", "transparent");
+				$("#border-button").css("color", "#484848");
+
+				$("#border-options").css("display", "none");
+
+				borderO = 0;
+				borderOn(borderO);
+
+			});
+
+		}
+
+	}
+
+	/*This will initialize the the border open and close*/
+	borderOn(borderO);
+
+	/*----------------------------------------------
+	----------------------------------------------
+	This will acitvate the border editor adn tools
+	----------------------------------------------
+	----------------------------------------------*/
 	/*This is the multipe dates section, this opens the single date*/
 	/*This will get the date when the page is loaded*/
 	$(window).on("load", function() {
@@ -284,8 +374,18 @@ if(winW > winH) {
 
 	});
 
+	/*----------------------------------------------
+	----------------------------------------------
+	This will open and close the check button to 
+	save the font color and font family to the rest
+	of the site
+	----------------------------------------------
+	----------------------------------------------*/
+	/*This is the variable that will open and close
+	the check*/
 	var checkO = 0;
 
+	/*This will open the check*/
 	function openCheck(o) {
 
 		if(o == 0) {
@@ -306,6 +406,7 @@ if(winW > winH) {
 
 	}
 
+	/*This will close the check*/
 	function closeCheck(c) {
 
 		if(c == 1) {
@@ -326,9 +427,16 @@ if(winW > winH) {
 
 	}
 
+	/*This will initialize the check open and close*/
 	openCheck(checkO);
 
-	/*This will open the button text section*/
+	/*----------------------------------------------
+	----------------------------------------------
+	This is specifically the button editor tools
+	----------------------------------------------
+	----------------------------------------------*/
+	/*This section is where you type the text for 
+	the button*/
 	$("#button-text-section").on("tap", function() {
 
 		setTimeout(function() {
@@ -338,7 +446,81 @@ if(winW > winH) {
 
 	});
 
-	/*This will open the web link section*/
+	/*------------------------------------
+	This will open the border options
+	------------------------------------*/
+	/*This will open the border choice for the button*/
+	function openChooseButton(o) {
+
+		if(o == 0) {
+
+			$("#choose-button-border").on("tap", function() {
+
+				$(this).css("background-color", "#484848");
+				$(this).css("color", "#f3f3f3");
+				this.innerHTML = "No Border";
+
+				closeChooseButton(1);
+
+			});
+
+		}
+	}
+
+	/*This will close the border choice for the button*/
+	function closeChooseButton(c) {
+
+		if(c == 1) {
+
+			$("#choose-button-border").on("tap", function() {
+
+				$(this).css("background-color", "transparent");
+				$(this).css("color", "#484848");
+				this.innerHTML = "Use Border";
+
+				openChooseButton(0);
+
+			});
+
+		}
+
+	}
+
+	openChooseButton(0);
+
+	/*This will change the font size of the border*/
+	/*This will change the font size up*/
+	$("#border-font-up-change").on("tap", function() {
+
+		var borderFontPre = document.getElementById("border-font-pre").innerHTML;
+		var borderFontPreInt = parseInt(borderFontPre);
+		borderFontPreInt++;
+
+		if(borderFontPreInt < 31) {
+
+			document.getElementById("border-font-pre").innerHTML = borderFontPreInt;
+
+		}
+
+	});
+
+	/*This will change the font size down*/
+	$("#border-font-down-change").on("tap", function() {
+
+		var borderFontPre = document.getElementById("border-font-pre").innerHTML;
+		var borderFontPreInt = parseInt(borderFontPre);
+		borderFontPreInt--;
+
+		if(borderFontPreInt > 9) {
+
+			document.getElementById("border-font-pre").innerHTML = borderFontPreInt;
+
+		}
+
+	});
+
+	/*This section is where you type the text for
+	the web link*/
 	$("#web-link-section").on("tap", function() {
 
 		setTimeout(function() {
@@ -388,22 +570,25 @@ if(winW > winH) {
 		});
 	}
 
+	/*----------------------------------------------
+	----------------------------------------------
+	This will open the learn description by changing the
+	editor options height
+	----------------------------------------------
+	----------------------------------------------*/
 	/*This will open the learn section*/
 	var learn = $(".learn");
 	var learnA = new Array();
 
 	fillArray(learnA, learn);
-	/*This will grb the close learn button to close 
-	the other information*/
-	var closeLearn = $(".close-learn");
-	var closeLearnA = new Array();
 
-	fillArray(closeLearnA, closeLearn);
-
-	//editor options
+	//editor options is where the description
+	//is stored
 	var editorOption = $(".editor-option");
 
-	//This is the learnDesc
+	//This is the learn description, and 
+	//will appear when the learn button is
+	//is clicked
 	var learnDesc = $(".learn-desc");
 
 	for(var i = 0; i < learn.length; i++) {
@@ -416,6 +601,20 @@ if(winW > winH) {
 		});
 	}
 
+	/*----------------------------------------------
+	----------------------------------------------
+	This will close the learning section of the 
+	editor
+	----------------------------------------------
+	----------------------------------------------*/
+	/*This will grab the close learn button to close 
+	the other information*/
+	var closeLearn = $(".close-learn");
+	var closeLearnA = new Array();
+
+	fillArray(closeLearnA, closeLearn);
+
+	//This is the close code for learn
 	for(var i = 0; i < closeLearn.length; i++) {
 		$(closeLearn[i]).on("tap", function() {
 
@@ -428,23 +627,27 @@ if(winW > winH) {
 
 	/*This will be the bottom selection. It will have the close
 	settings, save, publish, and menu button*/
+
+	/*----------------------------------------------
+	----------------------------------------------
+	This is the open and close function for the whole
+	editor
+	----------------------------------------------
+	----------------------------------------------*/
+
+	/*This is the open close function for the editor*/
+	var open = 0;
+
+	/*This will be the variables for the editor*/
 	var editorMenu = $(".editor-menu");
 	var editorMenuA = new Array();
 
 	fillArray(editorMenuA, editorMenu);
 
-	for(var i = 0; i < editorMenu.length; i++) {
-		$(editorMenu[i]).on("tap", function() {
-
-			var n = editorMenuA.indexOf(this);
-
-			
-		});
-	}
-
-	/*This is the open close function for the editor*/
-	var open = 0;
-
+	/*----------------------------------------
+	This is the opening function for the entire
+	editor
+	----------------------------------------*/
 	function openEditor(o) {
 
 		if(o == 0) {
@@ -463,6 +666,10 @@ if(winW > winH) {
 
 	}
 
+	/*----------------------------------------
+	This is the closing function for the entire
+	editor
+	----------------------------------------*/
 	function closeEditor(c) {
 
 		if(c == 1) {
@@ -481,6 +688,9 @@ if(winW > winH) {
 
 	}
 
+	/*----------------------------------------
+	This will start the opening editor
+	----------------------------------------*/
 	openEditor(open);
 
 }
