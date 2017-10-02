@@ -53,9 +53,8 @@ if(winH > winW) {
 
 	$(editorMenu[2]).on("tap", function() {
 
-		var backImg = firstBackF();
-
-		alert("This is the backImg " + backImg);
+		//This will open the settings
+		$("#save-options").css("bottom", "3em");
 
 	});
 

@@ -89,3 +89,83 @@
 	}
 
 }
+
+@media only screen and (min-width:769px) {
+
+	/*------------------------
+	Body Area
+	------------------------*/
+	#body-area {
+		width:100vw;
+		height:100vh;
+		overflow:hidden;
+		position:absolute;
+		top:0px;
+		left:0px;
+		text-align:center;
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:center center;
+		background-image:url("../img/hotel_1.jpg");
+		box-shadow:inset 0 0 0 800px rgba(0,0,0,0.4);
+	}
+
+	/*box shadow*/
+	#box-shadow {
+		width:60vw;
+		height:auto;
+		padding:1em;
+		padding-bottom:2em;
+		box-shadow:inset 0 0 0 800px rgba(0,0,0,0.4), 0 0 5px #000;
+		text-align:center;
+		margin:auto;
+	}
+
+	/*Icon Image*/
+	#icon {
+		height:115px;
+	}
+
+	/*Icon Title*/
+	#icon-title {
+		color:#fff;
+		text-transform:uppercase;
+		font-size:27px;
+		font-weight:normal;
+		width:12em;
+		padding:5px 15px;
+		margin:auto;
+		margin-top:0.5em;
+		border:3px solid #fff;
+	}
+
+	/*Date Area*/
+	#date-area {
+		font-weight:normal;
+		color:#fff;
+		text-transform:uppercase;
+		font-size:20px;
+	}
+
+	/*Link to website and button*/
+	#link-to-website {
+		text-decoration:none;
+	}
+
+	#link-to-website-button {
+		padding:5px 25px;
+		background-color:transparent;
+		border:3px solid #fff;
+		font-size:20px;
+		outline:none;
+		font-weight:normal;
+		text-transform:uppercase;
+		color:#fff;
+	}
+
+	#link-to-website-button:hover {
+		background-color:#fff;
+		color:#484848;
+	}
+
+}

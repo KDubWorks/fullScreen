@@ -1093,31 +1093,243 @@ html, body {
 	either save for the preview options, or 
 	for the total page.
 	------------------------------*/
-
 	#save-options {
 		width:100vw;
-		height:8em;
-		background-color:#fff;
+		height:calc(100vh - 3em);
+		background-color:#f3f3f3;
 		position:absolute;
 		z-index:10000;
-		bottom:3em;
+		bottom:-100vh;
 		left:0px;
 		overflow:hidden;
+		background-color:#fff;
 		transition:all 0.5s ease;
 	}
 
 	#preview-save {
-		width:100%;
-		height:4em;
+		width:50vw;
+		height:auto;
+		padding-top:0.25em;
+		padding-bottom:0.25em;
+		position:absolute;
+		z-index:10000;
 		text-align:center;
-		overflow:hidden;
+		top:0px;
+		left:0px;
+		background-color:#fff;
 	}
 
 	#final-save {
-		width:100%;
-		height:4em;
+		width:50vw;
+		height:auto;
+		padding-top:0.25em;
+		padding-bottom:0.25em;
+		position:absolute;
+		z-index:10000;
 		text-align:center;
+		top:0px;
+		right:0px;
+		background-color:#fff;
+	}
+
+	#preview-save > h3,
+	#final-save > h3 {
+		text-transform:uppercase;
+		font-weight:normal;
+		color:#484848;
+		font-size:15px;
+		width:40vw;
+		margin:auto;
+		margin-top:1em;
+	}
+
+	#preview-save > h3:after,
+	#final-save > h3:after {
+		display:block;
+		content:"";
+		width:100%;
+		height:3px;
+		margin:auto;
+		margin-top:5px;
+		background-color:#484848;
+	}
+
+	#final-save > h3:after {
+		display:none;
+	}
+
+	#list-of-preview-changes {
+		width:100vw;
+		height:100%;
+		overflow-y:scroll;
+	}
+
+}
+
+@media only screen and (min-width:769px) {
+
+	/*------------------------------
+
+	--Exterior editor div--
+
+	This is the body of the editor, 
+	starting with #editor-ext, floating
+	over the actual display of the body
+	------------------------------*/
+	#editor-ext {
+		width:100vw;
+		height:100vh;
+		position:absolute;
+		z-index:10000;
+		background-color:#fff;
+		top:0px;
+		left:0px;
 		overflow:hidden;
+	}
+
+	
+	#editor-title {
+		display:none;
+	}
+
+	/*------------------------------
+
+	--Tools editor--
+
+	These are the editing tools that are
+	used when the editor button is clicked
+	------------------------------*/
+	#toolsEditor {
+		width:100vw;
+		height:calc(100vh - 2em);
+		background-color:#fff;
+		position:absolute;
+		top:2em;
+		left:0px;
+		overflow:hidden;
+	}
+
+	.tools {
+		width:100vw;
+		height:100%;
+		float:left;
+		overflow-x:hidden;
+		overflow-y:scroll;
+	}
+
+	.sectools {
+		width:45vw;
+		height:3em;
+		overflow:hidden;
+		float:left;
+		margin-left:2.5vw;
+		margin-right:2.5vw;
+		margin-top:1em;
+		position:relative;
+		box-shadow:0 0 5px #000;
+	}
+
+	.head-section {
+		width:45vw;
+		height:3em;
+		overflow:hidden;
+		position:absolute;
+		top:0px;
+		left:0px;
+		overflow:hidden;
+		text-align:center;
+		background-color:#f3f3f3;
+		box-shadow:inset 0 0 0 1px #000;
+	}
+
+	.sectoolstitle {
+		text-transform:uppercase;
+		font-weight:normal;
+		color:#484848;
+		margin-top:15px;
+		font-size:17px;
+	}
+
+	/*------------------------------
+
+	--Editor--
+
+	These are the editor options and will
+	appear when the editor option is chosen
+	------------------------------*/
+	#editor {
+		width:100vw;
+		height:2em;
+		background-color:#f3f3f3;
+		overflow-y:hidden;
+		overflow-x:scroll;
+		position:absolute;
+		z-index:1000000;
+		top:0px;
+		left:0px;
+	}
+
+	#interior-edit {
+		height:2em;
+		width:84em;
+		overflow:hidden;
+		box-shadow:inset 0 0 0 2px #000;
+	}
+
+	.editor-option {
+		width:14em;
+		height:2em;
+		text-align:center;
+		color:#484848;
+		float:left;
+		overflow:hidden;
+	}
+
+	.editor-interior-option-section {
+		width:100%;
+		height:2em;
+		overflow:hidden;
+	}
+
+	.edit-title-card {
+		width:14em;
+		height:2em;
+		overflow:hidden;
+		box-shadow:inset 0 0 0 1px #000;
+	}
+
+	.edit-title-card > h6 {
+		font-size:15px;
+		text-transform:uppercase;
+		color:#484848;
+		font-weight:normal;
+		margin-top:8px;
+		cursor:default;
+	}
+
+	/*------------------------------
+
+	--Menu Options--
+
+	This is the bottom menu options 
+	like the close, save, publish, 
+	menu, and settings options, this 
+	is in the #editor-ext div
+	------------------------------*/
+	#editor-menu-buttons {
+		display:none;
+	}
+
+	/*------------------------------
+
+	--This is the save options--
+
+	These are the save options that will
+	either save for the preview options, or 
+	for the total page.
+	------------------------------*/
+	#save-options {
+		display:none;
 	}
 
 }
