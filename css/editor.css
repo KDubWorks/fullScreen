@@ -294,6 +294,18 @@ html, body {
 		margin-top:17px;
 	}
 
+	.sudo-publish {
+		width:3em;
+		height:3em;
+		position:absolute;
+		z-index:10000;
+		overflow:hidden;
+		text-align:center;
+		left:3em;
+		top:0px;
+		box-shadow:inset 0 0 0 1px #000;
+	}
+
 	.head-section {
 		width:90vw;
 		height:3em;
@@ -1178,18 +1190,106 @@ html, body {
 	------------------------------*/
 	#editor-ext {
 		width:100vw;
-		height:100vh;
+		height:3em;
 		position:absolute;
 		z-index:10000;
 		background-color:#fff;
 		top:0px;
 		left:0px;
 		overflow:hidden;
+		transition:all 0.75s ease;
 	}
 
 	
 	#editor-title {
 		display:none;
+	}
+
+	/*------------------------------
+
+	--Laptop editor menu--
+
+	These are the editor options that will 
+	open the editor on laptop and larger
+	screens
+	------------------------------*/
+	#laptop-editor-menu {
+		width:100vw;
+		height:3em;
+		background-color:#484848;
+		position:absolute;
+		z-index:1000000;
+		top:0px;
+		left:0px;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#laptop-editor-menu > h3 {
+		color:#f3f3f3;
+		width:10em;
+		padding:5px 15px;
+		font-weight:normal;
+		text-transform:uppercase;
+		border:3px solid #f3f3f3;
+		margin:auto;
+		margin-top:5px;
+	}
+
+	#editor-open {
+		width:5em;
+		height:3em;
+		position:absolute;
+		top:0px;
+		left:0em;
+		overflow:hidden;
+		text-align:center;
+	}
+	
+	#editor-open > img {
+		margin-top:10px;
+	}
+
+	#save-tag {
+		width:5em;
+		height:3em;
+		position:absolute;
+		top:0px;
+		left:5em;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#save-tag > img {
+		margin-top:10px;
+	}
+
+	#publish-tag {
+		width:5em;
+		height:3em;
+		position:absolute;
+		top:0px;
+		left:10em;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#publish-tag > img {
+		margin-top:10px;
+	}
+
+	#menu-tag {
+		width:3em;
+		height:3em;
+		overflow:hidden;
+		text-align:center;
+		position:absolute;
+		top:0px;
+		right:0px;
+	}
+
+	#menu-tag > img {
+		margin-top:10px;
 	}
 
 	/*------------------------------
@@ -1201,30 +1301,61 @@ html, body {
 	------------------------------*/
 	#toolsEditor {
 		width:100vw;
-		height:calc(100vh - 2em);
+		height:calc(100vh - 5em);
 		background-color:#fff;
 		position:absolute;
-		top:2em;
-		left:0px;
-		overflow:hidden;
+		bottom:0em;
+		left:0vw;
+		overflow-y:hidden;
+		overflow-x:hidden;
+		transition:all 0.75s ease;
 	}
 
+	#in-tools {
+		height:100%;
+		width:600vw;
+		box-shadow:inset 0 0 0 1px #000;
+		transition:all 0.75s ease;
+	}
+
+	/*----------------------
+	This is the general code
+	for the tools header and 
+	section area
+	-----------------------*/
 	.tools {
 		width:100vw;
 		height:100%;
 		float:left;
-		overflow-x:hidden;
+		position:relative;
+		transition:all 0.75s ease;
+	}
+
+	.left-side-tools {
+		width:45vw;
+		height:98%;
 		overflow-y:scroll;
+		overflow-x:hidden;
+		position:absolute;
+		left:2.5vw;
+		bottom:0%;
+	}
+
+	.right-side-tools {
+		width:45vw;
+		height:98%;
+		overflow-y:scroll;
+		position:absolute;
+		right:2.5vw;
+		bottom:0%;
 	}
 
 	.sectools {
 		width:45vw;
 		height:3em;
 		overflow:hidden;
-		float:left;
-		margin-left:2.5vw;
-		margin-right:2.5vw;
 		margin-top:1em;
+		margin-bottom:1em;
 		position:relative;
 		box-shadow:0 0 5px #000;
 	}
@@ -1248,6 +1379,473 @@ html, body {
 		color:#484848;
 		margin-top:15px;
 		font-size:17px;
+		cursor:default;
+	}
+
+	.edit-area {
+		width:100%;
+		height:auto;
+		margin-top:3em;
+	}
+
+	/*---------------------
+	These are the open and close 
+	indicators
+	---------------------*/
+	.open-indicator {
+		width:3em;
+		height:3em;
+		text-align:center;
+		overflow:hidden;
+		position:absolute;
+		z-index:10000;
+		top:0px;
+		left:0px;
+	}
+
+	.sudo-publish {
+		width:3em;
+		height:3em;
+		text-align:center;
+		overflow:hidden;
+		position:absolute;
+		z-index:100000;
+		top:0px;
+		left:3em;
+	}
+
+	.sudo-publish > img {
+		margin-top:12.5px;
+	}
+
+	.close-indicator {
+		width:3em;
+		height:3em;
+		text-align:center;
+		overflow:hidden;
+		position:absolute;
+		z-index:100000;
+		top:0px;
+		left:0px;
+		display:none;
+	}
+
+	.open-indicator > img,
+	.close-indicator > img {
+		margin-top:17px;
+	}
+
+	.close-div {
+		width:3em;
+		height:3em;
+		text-align:center;
+		overflow:hidden;
+		position:absolute;
+		z-index:10000;
+		top:0px;
+		right:0px;
+	}
+
+	.close-div > img {
+		margin-top:15px;
+	}
+
+	/*------------------------------
+
+	--This is specifically the background editor--
+
+	These are the tools to edit the background
+	image
+	------------------------------*/
+	/*This is the background Image Preview*/
+	#background {
+		width:45vw;
+		height:36vw;
+		overflow:hidden;
+	}
+
+	#background-in {
+		width:100%;
+		height:36vw;
+	}
+
+	.back {
+		float:left;
+		width:45vw;
+		height:36vw;
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:center center;
+		box-shadow:inset 0 0 0 800px rgba(0,0,0,0.5);
+	}
+
+	#first-back {
+		background-image:url("../img/hotel_1.jpg");
+	}
+
+	/*This is the background Image Count*/
+	#count {
+		width:45vw;
+		height:4em;
+		background-color:#dadada;
+	}
+
+	.move-count {
+		width:20%;
+		height:4em;
+		float:left;
+		text-align:center;
+		overflow:hidden;
+	}
+
+	.button-count {
+		width:2em;
+		height:2em;
+		background-color:#f3f3f3;
+		text-align:center;
+		overflow:hidden;
+		border-radius:50%;
+		box-shadow:0 0 5px #000;
+		margin:auto;
+		margin-top:15px;
+	}
+
+	.button-count > img{
+		margin-top:7px;
+	}
+
+	#up-count {
+		margin-left:20%;
+	}
+
+	#count-pre {
+		margin-top:20px;
+	}
+
+	/*This is the background selection*/
+	#selection {
+		width:45vw;
+		height:12em;
+		overflow:hidden;
+		box-shadow:inset 0 0 0 2px #000;
+		transition:all 0.75s ease;
+		position:relative;
+	}
+
+	#backcolorsel {
+		width:45vw;
+		height:6em;
+		overflow:hidden;
+		text-align:center;
+		position:absolute;
+		z-index:10000;
+		position:relative;
+		background-color:#f3f3f3;
+		box-shadow:inset 0 0 0 1px #000;
+		transition:all 0.75s ease;
+	}
+
+	#backimgsel {
+		width:45vw;
+		height:6em;
+		overflow:hidden;
+		text-align:center;
+		position:absolute;
+		z-index:10000;
+		position:relative;
+		background-color:#f3f3f3;
+		box-shadow:inset 0 0 0 1px #000;
+		transition:all 0.75s ease;
+	}
+
+	#backcolorsel > h3,
+	#backimgsel > h3 {
+		width:15em;
+		padding:5px 15px;
+		border:3px solid #484848;
+		font-weight:normal;
+		color:#484848;
+		text-transform:uppercase;
+		margin:auto;
+		margin-top:30px;
+	}
+
+	/*This is the image selection*/
+	#img-select {
+		position:absolute;
+		z-index:100;
+		top:0px;
+		left:0px;
+		overflow:hidden;
+		display:none;
+	}
+
+	#in-img-select {
+		width:270vw;
+		height:36vw;
+	}
+
+	.imgs-to-sel {
+		width:45vw;
+		height:36vw;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center center;
+		box-shadow:inset 0 0 0 800px rgba(0,0,0,0.4);
+		float:left;
+
+	}
+
+	/*This is the background animation*/
+	#animation {
+		width:45vw;
+		height:10em;
+		background-color:#dadada;
+		overflow:hidden;
+	}
+
+	/*------------------------------
+
+	--This is specifically the title editor--
+
+	These are the tools to edit the title 
+	editor
+	------------------------------*/
+	/*This is the title preview*/
+	#title-preview {
+		width:45vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		text-align:center;
+	}
+
+	#title-preview > h3 {
+		text-transform:uppercase;
+		font-weight:normal;
+		color:#fff;
+		width:13em;
+		padding:5px 15px;
+		border:3px solid #fff;
+		margin:auto;
+		font-size:27px;
+	}
+
+	/*This is the title edit*/
+	#title-edit {
+		width:45vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		text-align:center;
+		overflow:hidden;
+	}
+
+	#title-area {
+		width:28vw;
+		height:2.25em;
+		overflow:hidden;
+		margin:auto;
+		position:relative;
+		border-bottom:2px solid #484848;
+	}
+
+	#title-changer {
+		width:100%;
+		background-color:transparent;
+		border:none;
+		box-shadow:none;
+		font-size:18px;
+		position:absolute;
+		bottom:5px;
+		left:0px;
+		outline:none;
+	}
+
+	/*This is the font size changer*/
+	#font-size {
+		width:45vw;
+		height:4em;
+		background-color:#dadada;
+		overflow:hidden;
+	}
+
+	#font-up {
+		margin-left:20%;
+	}
+
+	/*This is the title border editor*/
+	#title-border {
+		width:45vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#border-button {
+		padding:5px 15px;
+		border:3px solid #484848;
+		color:#484848;
+		background-color:#dadada;
+		font-size:18px;
+		text-transform:uppercase;
+		font-weight:normal;
+		outline:none;
+	}
+
+	/*------------------------------
+
+	--This is the date editor--
+
+	These are the tools to edit the
+	date
+	------------------------------*/
+	/*This is the date preview*/
+	#date-preview {
+		width:45vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		text-align:center;
+		overflow:hidden;
+	}
+
+	/*This is the date setup section*/
+	#date-setup-sec {
+		display:none;
+	}
+
+	/*------------------------------
+
+	--This is the button editor--
+
+	These are the tools for the button
+	editor
+	------------------------------*/
+	/*This is the button preview editor*/
+	#button-preview {
+		width:45vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#button-to-change {
+		padding:5px 25px;
+		background-color:transparent;
+		border:3px solid #fff;
+		font-size:20px;
+		outline:none;
+		font-weight:normal;
+		text-transform:uppercase;
+		color:#fff;
+	}
+
+	/*This is the button text editor*/
+	#button-text {
+		width:45vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		text-align:center;
+		overflow:hidden;
+	}
+
+	#button-text-area {
+		width:28vw;
+		height:2.25em;
+		overflow:hidden;
+		margin:auto;
+		position:relative;
+		border-bottom:2px solid #484848;
+	}
+
+	#button-text-changer {
+		width:100%;
+		background-color:transparent;
+		border:none;
+		box-shadow:none;
+		font-size:18px;
+		position:absolute;
+		bottom:5px;
+		left:0px;
+		outline:none;
+	}
+
+	/*This is the button border editor*/
+	#button-border {
+		width:45vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		overflow:hidden;
+		text-align:center;
+	}
+
+	#choose-button-border {
+		padding:5px 15px;
+		border:3px solid #484848;
+		color:#484848;
+		background-color:#dadada;
+		font-size:18px;
+		text-transform:uppercase;
+		font-weight:normal;
+		outline:none;
+	}
+
+	/*This is the font size editor*/
+	#border-font-size {
+		width:45vw;
+		height:4em;
+		background-color:#dadada;
+		overflow:hidden;
+	}
+
+	#border-font-up {
+		margin-left:20%;
+	}
+
+	/*This is the website link editor*/
+	#web-link {
+		width:45vw;
+		height:auto;
+		padding-top:1em;
+		padding-bottom:1em;
+		background-color:#dadada;
+		text-align:center;
+		overflow:hidden;
+	}
+
+	#web-link-text-area {
+		width:28vw;
+		height:2.25em;
+		overflow:hidden;
+		margin:auto;
+		position:relative;
+		border-bottom:2px solid #484848;
+	}
+
+	#web-link-text-changer {
+		width:100%;
+		background-color:transparent;
+		border:none;
+		box-shadow:none;
+		font-size:18px;
+		position:absolute;
+		bottom:5px;
+		left:0px;
+		outline:none;
 	}
 
 	/*------------------------------
@@ -1265,15 +1863,15 @@ html, body {
 		overflow-x:scroll;
 		position:absolute;
 		z-index:1000000;
-		top:0px;
+		top:0em;
 		left:0px;
+		transition:all 0.75s ease;
 	}
 
 	#interior-edit {
 		height:2em;
 		width:84em;
 		overflow:hidden;
-		box-shadow:inset 0 0 0 2px #000;
 	}
 
 	.editor-option {
@@ -1295,7 +1893,6 @@ html, body {
 		width:14em;
 		height:2em;
 		overflow:hidden;
-		box-shadow:inset 0 0 0 1px #000;
 	}
 
 	.edit-title-card > h6 {
@@ -1329,7 +1926,53 @@ html, body {
 	for the total page.
 	------------------------------*/
 	#save-options {
-		display:none;
+		width:25em;
+		height:calc(100vh - 5em);
+		position:absolute;
+		z-index:10000000;
+		bottom:100vh;
+		left:5em;
+		background-color:#f3f3f3;
+		overflow:hidden;
+		box-shadow:0 0 5px #000;
+		transition:all 0.75s ease;
+	}
+
+	#final-save {
+		width:100%;
+		height:auto;
+		position:absolute;
+		top:0px;
+		right:0px;
+		text-align:center;
+		overflow:hidden;
+		background-color:#f3f3f3;
+		padding-top:1em;
+		padding-bottom:1em;
+	}
+
+	#final-save > h3 {
+		font-size:15px;
+		font-weight:normal;
+		color:#484848;
+		text-transform:uppercase;
+		width:11em;
+		margin:auto;
+		margin-top:10px;
+	}
+
+	#final-save > h3:after {
+		width:100%;
+		height:3px;
+		display:block;
+		content:"";
+		background-color:#484848;
+		margin:auto;
+		margin-top:3px;
+	}
+
+	#final-save:hover {
+		background-color:#dadada;
 	}
 
 }

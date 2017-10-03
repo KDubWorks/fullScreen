@@ -2,15 +2,15 @@
 var winW = $(window).width();
 var winH = $(window).height();
 
-if(winH > winW) {
+function fillArray(arrL, arr) {
 
-	function fillArray(arrL, arr) {
-
-		for(var i = 0; i < arr.length; i++) {
-			arrL[i] = arr[i];
-		}
-
+	for(var i = 0; i < arr.length; i++) {
+		arrL[i] = arr[i];
 	}
+
+}
+
+if(winH > winW) {
 
 	//THis will sense when the content fot the background 
 	//has changed and will prompt for a change.
@@ -53,11 +53,40 @@ if(winH > winW) {
 
 	$(editorMenu[2]).on("tap", function() {
 
-		//This will open the settings
-		$("#save-options").css("bottom", "3em");
-
 	});
 
-	var backChanged = imageChangeOne();
+} else {
+
+	if(winW >= 769) {
+
+		$("#save-tag").click(function() {
+
+			$("#save-options").css("bottom", "1em");
+
+		});
+
+		var sudoPublish = $(".sudo-publish");
+		var sudoPublishA = new Array();
+		var titlePre = $("#title-preview").children();
+
+		fillArray(sudoPublishA, sudoPublish);
+
+		for(var i = 0; i < sudoPublish.length; i++) {
+			$(sudoPublish[i]).click(function() {
+
+				var n = sudoPublishA.indexOf(this);
+
+				if(n == 0) {
+
+					var edit = $("#title-changer").val();
+
+					titlePre[0].innerHTML = edit;
+
+				}
+
+			});
+		}
+
+	}
 
 }

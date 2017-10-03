@@ -7,7 +7,6 @@
 		<!--<meta name="theme-color" content="#008080">-->
 		<title>Full Screen Editor</title>
 		<link rel="stylesheet" type="text/css" href="css/editor.css">
-		<link rel="stylesheet" type="text/css" href="css/editorLand.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script
   src="https://code.jquery.com/jquery-1.11.2.js"
@@ -39,209 +38,45 @@
 
 				<!--Background Editor-->
 
-				<div class="tools">
-					
-					<div class="sectools">
+				<div id="in-tools">
 
-						<div class="head-section">
+					<div class="tools">
+						
+						<div class="left-side-tools">
 
-							<h1 class="sectoolstitle">Background (Preview)</h1>
+							<div class="sectools">
 
-						</div>
+								<div class="head-section">
 
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="background">
-								
-								<div id="background-in">
-									
-									<div class="back" id="first-back"></div>
+									<h1 class="sectoolstitle">Background (Preview)</h1>
 
 								</div>
 
-							</div>
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
 
-						</div>
+								</div>
 
-					</div>
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
 
-					<div class="sectools">
+								</div>
 
-						<div class="head-section">
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
 
-							<h1 class="sectoolstitle">Background Count</h1>
+								</div>
 
-						</div>
+								<div class="edit-area">
 
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-							
-							<div id="count">
-								
-								<div id="up-count" class="move-count">
-
-									<div id="change-up-count" class="button-count">
+									<div id="background">
 										
-										<img src="img/plus.png" width="auto" height="17px"/>
-
-									</div>
-
-								</div>
-							
-								<div id="back-count" class="move-count">
-									
-									<h3 id="count-pre">1</h3>
-
-								</div>
-
-								<div id="down-count" class="move-count">
-
-									<div id="change-down-count" class="button-count">
-										
-										<img src="img/minus.png" width="auto" height="17px"/>
-
-									</div>
-
-								</div>
-
-							</div>
-
-							<div class="load-to-preview"></div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Background Select</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-							
-							<div id="selection">
-								
-								<div id="backcolorsel">
-									
-									<h3>Background Colors</h3>
-
-								</div>
-
-								<div id="backimgsel">
-									
-									<h3>Background Images</h3>
-
-								</div>
-
-								<div id="color-select">
-									
-									<div id="in-color-select">
-										
-										<div class="in-color" style="background-color:#008080"></div>
-										<div class="in-color" style="background-color:#007373"></div>
-										<div class="in-color" style="background-color:#006666"></div>
-										<div class="in-color" style="background-color:#005959"></div>
-										<div class="in-color" style="background-color:#004C4C"></div>
-										<div class="in-color" style="background-color:#004040"></div>
-										<div class="in-color" style="background-color:#003333"></div>
-										<div class="in-color" style="background-color:#002626"></div>
-										<div class="in-color" style="background-color:#001919"></div>
-										<div class="in-color" style="background-color:#000C0C"></div>
-										<div class="in-color" style="background-color:#000"></div>
-										<div class="in-color" style="background-color:#FFF"></div>
-
-									</div>
-
-								</div>
-
-								<div id="img-select">
-								
-									<div id="in-img-select">
-
-										<div style="background-image:url('img/hotel_1.jpg')" class="imgs-to-sel">
+										<div id="background-in">
 											
-											<div class="select-img"></div>
-
-										</div>
-										<div style="background-image:url('img/hotel_2.jpg')" class="imgs-to-sel">
-											
-											<div class="select-img"></div>
-
-										</div>
-										<div style="background-image:url('img/hotel_3.jpg')" class="imgs-to-sel">
-											
-											<div class="select-img"></div>
-
-										</div>
-										<div style="background-image:url('img/hotel_4.jpg')" class="imgs-to-sel">
-											
-											<div class="select-img"></div>
-
-										</div>
-										<div style="background-image:url('img/hotel_5.jpg')" class="imgs-to-sel">
-											
-											<div class="select-img"></div>
-
-										</div>
-										<div style="background-image:url('img/hotel_6.jpg')" class="imgs-to-sel">
-											
-											<div class="select-img"></div>
+											<div class="back" id="first-back"></div>
 
 										</div>
 
@@ -251,920 +86,842 @@
 
 							</div>
 
-							<div class="load-to-preview"></div>
+							<div class="sectools">
 
-						</div>
+								<div class="head-section">
 
-					</div>
+									<h1 class="sectoolstitle">Background Count</h1>
 
-					<div class="sectools">
+								</div>
 
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Background Animation</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-							
-							<div id="animation">
-							
-
-							</div>
-
-							<div class="load-to-preview"></div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<!--Icon Image-->
-
-				<div class="tools">
-					
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Image (Preview)</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="image-preview">
-								
-								<img src="img/powerIcon.png" width="auto" height="50px"/>
-								
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<!--Title Edit-->
-
-				<div class="tools">
-					
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Title (Preview)</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="title-preview">
-								
-								<h3>Icon Convention</h3>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section" id="title-edit-sec-head">
-
-							<h1 class="sectoolstitle">Title Edit</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="title-edit">
-								
-								<div id="title-area">
+								<div class="open-indicator">
 									
-									<input type="text" name="title-changer" id="title-changer" placeholder="type the title here"/>
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+									
+									<div id="count">
+										
+										<div id="up-count" class="move-count">
+
+											<div id="change-up-count" class="button-count">
+												
+												<img src="img/plus.png" width="auto" height="17px"/>
+
+											</div>
+
+										</div>
+									
+										<div id="back-count" class="move-count">
+											
+											<h3 id="count-pre">1</h3>
+
+										</div>
+
+										<div id="down-count" class="move-count">
+
+											<div id="change-down-count" class="button-count">
+												
+												<img src="img/minus.png" width="auto" height="17px"/>
+
+											</div>
+
+										</div>
+
+									</div>
+
+									<div class="load-to-preview"></div>
 
 								</div>
 
 							</div>
 
-							<div class="load-to-preview"></div>
-
 						</div>
 
-					</div>
+						<div class="right-side-tools">
 
-					<div class="sectools">
+							<div class="sectools">
 
-						<div class="head-section">
+								<div class="head-section">
 
-							<h1 class="sectoolstitle">Font Color</h1>
+									<h1 class="sectoolstitle">Background Select</h1>
 
-						</div>
+								</div>
 
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
 
-						</div>
+								</div>
 
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
 
-						</div>
+								</div>
 
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
 
-						</div>
+								</div>
 
-						<div class="edit-area">
+								<div class="edit-area">
+									
+									<div id="selection">
+										
+										<div id="backcolorsel">
+											
+											<h3>Background Colors</h3>
 
-							<div id="font-color">
-								
-								
+										</div>
+
+										<div id="backimgsel">
+											
+											<h3>Background Images</h3>
+
+										</div>
+
+										<div id="color-select">
+											
+											<div id="in-color-select">
+												
+												<div class="in-color" style="background-color:#008080"></div>
+												<div class="in-color" style="background-color:#007373"></div>
+												<div class="in-color" style="background-color:#006666"></div>
+												<div class="in-color" style="background-color:#005959"></div>
+												<div class="in-color" style="background-color:#004C4C"></div>
+												<div class="in-color" style="background-color:#004040"></div>
+												<div class="in-color" style="background-color:#003333"></div>
+												<div class="in-color" style="background-color:#002626"></div>
+												<div class="in-color" style="background-color:#001919"></div>
+												<div class="in-color" style="background-color:#000C0C"></div>
+												<div class="in-color" style="background-color:#000"></div>
+												<div class="in-color" style="background-color:#FFF"></div>
+
+											</div>
+
+										</div>
+
+										<div id="img-select">
+										
+											<div id="in-img-select">
+
+												<div style="background-image:url('img/hotel_1.jpg')" class="imgs-to-sel">
+													
+													<div class="select-img"></div>
+
+												</div>
+												<div style="background-image:url('img/hotel_2.jpg')" class="imgs-to-sel">
+													
+													<div class="select-img"></div>
+
+												</div>
+												<div style="background-image:url('img/hotel_3.jpg')" class="imgs-to-sel">
+													
+													<div class="select-img"></div>
+
+												</div>
+												<div style="background-image:url('img/hotel_4.jpg')" class="imgs-to-sel">
+													
+													<div class="select-img"></div>
+
+												</div>
+												<div style="background-image:url('img/hotel_5.jpg')" class="imgs-to-sel">
+													
+													<div class="select-img"></div>
+
+												</div>
+												<div style="background-image:url('img/hotel_6.jpg')" class="imgs-to-sel">
+													
+													<div class="select-img"></div>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+									<div class="load-to-preview"></div>
+
+								</div>
 
 							</div>
 
-							<div class="load-to-preview"></div>
+							<div class="sectools">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Background Animation</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+									
+									<div id="animation">
+									
+
+									</div>
+
+									<div class="load-to-preview"></div>
+
+								</div>
+
+							</div>
 
 						</div>
 
 					</div>
 
-					<div class="sectools">
+					<!--Icon Image-->
 
-						<div class="head-section">
+					<div class="tools">
+						
+						<div class="left-side-tools">
 
-							<h1 class="sectoolstitle">Font Size</h1>
+							<div class="sectools">
 
-						</div>
+								<div class="head-section">
 
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
+									<h1 class="sectoolstitle">Image (Preview)</h1>
 
-						</div>
+								</div>
 
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
 
-						</div>
+								</div>
 
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
 
-						</div>
+								</div>
 
-						<div class="edit-area">
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
 
-							<div id="font-size">
-								
-								<div id="font-up" class="move-count">
+								</div>
 
-									<div id="font-up-change" class="button-count">
+								<div class="edit-area">
+
+									<div id="image-preview">
 										
-										<img src="img/plus.png" width="auto" height="17px"/>
+										<img src="img/powerIcon.png" width="auto" height="50px"/>
+										
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!--Title Edit-->
+
+					<div class="tools">
+						
+						<div class="left-side-tools">
+
+							<div class="sectools">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Title (Preview)</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="title-preview">
+										
+										<h3>Icon Convention</h3>
 
 									</div>
 
 								</div>
-							
-								<div id="cur-font" class="move-count">
-									
-									<h3 id="font-pre">12</h3>
+
+							</div>
+
+							<div class="sectools">
+
+								<div class="head-section" id="title-edit-sec-head">
+
+									<h1 class="sectoolstitle">Title Edit</h1>
 
 								</div>
 
-								<div id="font-down" class="move-count">
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
 
-									<div id="font-down-change" class="button-count">
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="sudo-publish" id="edit-title-publish">
+									
+									<img src="img/publish.png" width="auto" height="25px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="title-edit">
 										
-										<img src="img/minus.png" width="auto" height="17px"/>
+										<div id="title-area">
+											
+											<input type="text" name="title-changer" id="title-changer" placeholder="type the title here"/>
+
+										</div>
 
 									</div>
 
-								</div>	
+									<div class="load-to-preview"></div>
+
+								</div>
 
 							</div>
 
-							<div class="load-to-preview"></div>
+							<div class="sectools">
 
-						</div>
+								<div class="head-section">
 
-					</div>
+									<h1 class="sectoolstitle">Font Color</h1>
 
-					<div class="sectools">
+								</div>
 
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Font Family</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="font-family">
-								
-								
-
-							</div>
-
-							<div class="load-to-preview"></div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Title Border</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="title-border">
-								
-								<button id="border-button">Use Border</button>
-
-								<div id="border-options">
+								<div class="open-indicator">
 									
-
-
-								</div>
-
-							</div>
-
-							<div class="load-to-preview"></div>
-
-						</div>
-
-					</div>
-
-					<div class="check-to-rest">
-							
-						<div class="check">
-							
-							<img src="img/checkMark.png" width="auto" height="25px"/>
-
-						</div>
-
-						<p class="check-desc">This will save the font color and font family for the entire site.</p>
-
-					</div>
-
-				</div>
-
-				<!--Date Edit-->
-
-				<div class="tools">
-					
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Date (Preview)</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="date-preview">
-								
-								<h3 id="date-already"></h3>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Date Setup</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="date-setup">
-								
-								<div id="date-setup-in">
-
-									<button class="button-setup" id="single-date-button">single date</button>
-
-									<button class="button-setup" id="multiple-dates">multiple dates</button>
+									<img src="img/open.png" width="auto" height="15px"/>
 
 								</div>
 
-							</div>
-
-						</div>
-
-					</div>
-
-					<div id="single-date-section" class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Single Date</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="single-date">
-								
-								
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools multiple-dates">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">First Date</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="first-date-setup">
-								
-								
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools multiple-dates">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">End Date</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="end-date-setup">
-								
-								
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools multiple-dates">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Between Text</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="between-setup">
-								
-								
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<!--Button Edit-->
-
-				<div class="tools">
-					
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Button (Preview)</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="button-preview">
-								
-								<button id="button-to-change">website</button>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section" id="button-text-section">
-
-							<h1 class="sectoolstitle">Button Text</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="button-text">
-								
-								<div id="button-text-area">
+								<div class="close-indicator">
 									
-									<input type="text" name="button-text-changer" id="button-text-changer" placeholder="type the title here"/>
+									<img src="img/closeUp.png" width="auto" height="15px"/>
 
 								</div>
 
-							</div>
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
 
-						</div>
+								</div>
 
-					</div>
+								<div class="sudo-publish" id="edit-color-publish">
+									
+									<img src="img/publish.png" width="auto" height="25px"/>
 
-					<div class="sectools">
+								</div>
 
-						<div class="head-section">
+								<div class="edit-area">
 
-							<h1 class="sectoolstitle">Button Border</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="button-border">
-								
-								<button id="choose-button-border">use border</button>
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Background Color</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="border-back">
-								
-								
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Font Color</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="border-font-color">
-								
-								
-
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="sectools">
-
-						<div class="head-section">
-
-							<h1 class="sectoolstitle">Font Size</h1>
-
-						</div>
-
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="border-font-size">
-								
-								<div id="border-font-up" class="move-count">
-
-									<div id="border-font-up-change" class="button-count">
+									<div id="font-color">
 										
-										<img src="img/plus.png" width="auto" height="17px"/>
+										
+
+									</div>
+
+									<div class="load-to-preview"></div>
+
+								</div>
+
+							</div>
+
+							<div class="sectools">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Font Size</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="sudo-publish" id="edit-size-publish">
+									
+									<img src="img/publish.png" width="auto" height="25px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="font-size">
+										
+										<div id="font-up" class="move-count">
+
+											<div id="font-up-change" class="button-count">
+												
+												<img src="img/plus.png" width="auto" height="17px"/>
+
+											</div>
+
+										</div>
+									
+										<div id="cur-font" class="move-count">
+											
+											<h3 id="font-pre">12</h3>
+
+										</div>
+
+										<div id="font-down" class="move-count">
+
+											<div id="font-down-change" class="button-count">
+												
+												<img src="img/minus.png" width="auto" height="17px"/>
+
+											</div>
+
+										</div>	
+
+									</div>
+
+									<div class="load-to-preview"></div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="right-side-tools">
+
+							<div class="sectools">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Font Family</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="sudo-publish" id="edit-family-publish">
+									
+									<img src="img/publish.png" width="auto" height="25px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="font-family">
+										
+										
+
+									</div>
+
+									<div class="load-to-preview"></div>
+
+								</div>
+
+							</div>
+
+							<div class="sectools">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Title Border</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="sudo-publish" id="edit-title-border-publish">
+									
+									<img src="img/publish.png" width="auto" height="25px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="title-border">
+										
+										<button id="border-button">Use Border</button>
+
+										<div id="border-options">
+											
+
+
+										</div>
+
+									</div>
+
+									<div class="load-to-preview"></div>
+
+								</div>
+
+							</div>
+
+							<div class="check-to-rest">
+									
+								<div class="check">
+									
+									<img src="img/checkMark.png" width="auto" height="25px"/>
+
+								</div>
+
+								<p class="check-desc">This will save the font color and font family for the entire site.</p>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!--Date Edit-->
+
+					<div class="tools">
+						
+						<div class="left-side-tools">
+
+							<div class="sectools">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Date (Preview)</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="date-preview">
+										
+										<h3 id="date-already"></h3>
 
 									</div>
 
 								</div>
-							
-								<div id="border-cur-font" class="move-count">
-									
-									<h3 id="border-font-pre">12</h3>
+
+							</div>
+
+							<div class="sectools" id="date-setup-sec">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Date Setup</h1>
 
 								</div>
 
-								<div id="border-font-down" class="move-count">
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
 
-									<div id="border-font-down-change" class="button-count">
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="date-setup">
 										
-										<img src="img/minus.png" width="auto" height="17px"/>
+										<div id="date-setup-in">
+
+											<button class="button-setup" id="single-date-button">single date</button>
+
+											<button class="button-setup" id="multiple-dates">multiple dates</button>
+
+										</div>
 
 									</div>
 
-								</div>	
+								</div>
+
+							</div>
+
+							<div id="single-date-section" class="sectools">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Single Date</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="single-date">
+										
+										
+
+									</div>
+
+								</div>
 
 							</div>
 
 						</div>
 
-					</div>
+						<div class="right-side-tools">
 
-					<div class="sectools">
+							<div class="sectools multiple-dates">
 
-						<div class="head-section" id="web-link-section">
+								<div class="head-section">
 
-							<h1 class="sectoolstitle">Web Link</h1>
+									<h1 class="sectoolstitle">First Date</h1>
 
-						</div>
+								</div>
 
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
-
-						</div>
-
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
-
-						</div>
-
-						<div class="edit-area">
-
-							<div id="web-link">
-								
-								<div id="web-link-text-area">
+								<div class="open-indicator">
 									
-									<input type="text" name="web-link-text-changer" id="web-link-text-changer" placeholder="type the title here"/>
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="first-date-setup">
+										
+										
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="sectools multiple-dates">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">End Date</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="end-date-setup">
+										
+										
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="sectools multiple-dates">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Between Text</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="between-setup">
+										
+										
+
+									</div>
 
 								</div>
 
@@ -1174,43 +931,311 @@
 
 					</div>
 
-				</div>
+					<!--Button Edit-->
 
-				<!--Shadow Box-->
+					<div class="tools">
 
-				<div class="tools">
-					
-					<div class="sectools">
+						<div class="left-side-tools">
+						
+							<div class="sectools">
 
-						<div class="head-section">
+								<div class="head-section">
 
-							<h1 class="sectoolstitle">Shadow Box Setup</h1>
+									<h1 class="sectoolstitle">Button (Preview)</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="button-preview">
+										
+										<button id="button-to-change">website</button>
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="sectools">
+
+								<div class="head-section" id="button-text-section">
+
+									<h1 class="sectoolstitle">Button Text</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="button-text">
+										
+										<div id="button-text-area">
+											
+											<input type="text" name="button-text-changer" id="button-text-changer" placeholder="type the title here"/>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="sectools">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Button Border</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="button-border">
+										
+										<button id="choose-button-border">use border</button>
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="sectools">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Background Color</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="border-back">
+										
+										
+
+									</div>
+
+								</div>
+
+							</div>
 
 						</div>
 
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
+						<div class="right-side-tools">
 
-						</div>
+							<div class="sectools">
 
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
+								<div class="head-section">
 
-						</div>
+									<h1 class="sectoolstitle">Font Color</h1>
 
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
+								</div>
 
-						</div>
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
 
-						<div class="edit-area">
+								</div>
 
-							<div id="shadow-box-setup">
-								
-								
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="border-font-color">
+										
+										
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="sectools">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Font Size</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="border-font-size">
+										
+										<div id="border-font-up" class="move-count">
+
+											<div id="border-font-up-change" class="button-count">
+												
+												<img src="img/plus.png" width="auto" height="17px"/>
+
+											</div>
+
+										</div>
+									
+										<div id="border-cur-font" class="move-count">
+											
+											<h3 id="border-font-pre">12</h3>
+
+										</div>
+
+										<div id="border-font-down" class="move-count">
+
+											<div id="border-font-down-change" class="button-count">
+												
+												<img src="img/minus.png" width="auto" height="17px"/>
+
+											</div>
+
+										</div>	
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="sectools">
+
+								<div class="head-section" id="web-link-section">
+
+									<h1 class="sectoolstitle">Web Link</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="web-link">
+										
+										<div id="web-link-text-area">
+											
+											<input type="text" name="web-link-text-changer" id="web-link-text-changer" placeholder="type the title here"/>
+
+										</div>
+
+									</div>
+
+								</div>
 
 							</div>
 
@@ -1218,37 +1243,89 @@
 
 					</div>
 
-					<div class="sectools">
+					<!--Shadow Box-->
 
-						<div class="head-section">
+					<div class="tools">
 
-							<h1 class="sectoolstitle">Shadow Background Color</h1>
+						<div class="left-side-tools">
+						
+							<div class="sectools">
+
+								<div class="head-section">
+
+									<h1 class="sectoolstitle">Shadow Box Setup</h1>
+
+								</div>
+
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="shadow-box-setup">
+										
+										
+
+									</div>
+
+								</div>
+
+							</div>
 
 						</div>
 
-						<div class="open-indicator">
-							
-							<img src="img/open.png" width="auto" height="15px"/>
+						<div class="right-side-tools">
 
-						</div>
+							<div class="sectools">
 
-						<div class="close-indicator">
-							
-							<img src="img/closeUp.png" width="auto" height="15px"/>
+								<div class="head-section">
 
-						</div>
+									<h1 class="sectoolstitle">Shadow Background Color</h1>
 
-						<div class="close-div">
-							
-							<img src="img/closeButton.png" width="auto" height="20px"/>
+								</div>
 
-						</div>
+								<div class="open-indicator">
+									
+									<img src="img/open.png" width="auto" height="15px"/>
 
-						<div class="edit-area">
+								</div>
 
-							<div id="shadow-back-color">
-								
-								
+								<div class="close-indicator">
+									
+									<img src="img/closeUp.png" width="auto" height="15px"/>
+
+								</div>
+
+								<div class="close-div">
+									
+									<img src="img/closeButton.png" width="auto" height="20px"/>
+
+								</div>
+
+								<div class="edit-area">
+
+									<div id="shadow-back-color">
+										
+										
+
+									</div>
+
+								</div>
 
 							</div>
 
@@ -1539,12 +1616,6 @@
 		</div>
 
 		<div id="save-options">
-			
-			<div id="preview-save">
-				
-				<h3>Preview Options</h3>
-
-			</div>
 
 			<div id="final-save">
 				
@@ -1552,9 +1623,29 @@
 
 			</div>
 
-			<div id="list-of-preview-changes"></div>
-
 			<div id="list-of-final-changes"></div>
+
+		</div>
+
+		<div id="laptop-editor-menu">
+			
+			<div id="editor-open">
+				<img src="img/whiteEditor.png" width="auto" height="30px"/>
+			</div>
+
+			<div id="save-tag">
+				<img src="img/whiteSave.png" width="auto" height="30px"/>
+			</div>
+
+			<div id="publish-tag">
+				<img src="img/whitePublish.png" width="auto" height="30px"/>
+			</div>
+
+			<div id="menu-tag">
+				<img src="img/whiteMenu.png" width="auto" height="30px"/>
+			</div>
+
+			<h3>Editor Options</h3>
 
 		</div>
 		
