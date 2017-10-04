@@ -90,6 +90,125 @@ if(winW > winH) {
 
 		});
 
+		/*---------------------------------
+		---------------------------------
+		This will open the individual section
+		---------------------------------
+		---------------------------------*/
+		/*This is the head section variable*/
+		var headSec = $(".head-section");
+		var headSecA = new Array();
+
+		fillArray(headSecA, headSec);
+
+		/*This is open indicator*/
+		var openIndicator = $(".open-indicator");
+		var openIndicatorA = new Array();
+
+		fillArray(openIndicatorA, openIndicator);
+
+		/*This is the close indicator*/
+		var closeIndicator = $(".close-indicator");
+		var closeIndicatorA = new Array();
+
+		fillArray(closeIndicatorA, closeIndicator);
+
+		/*This is the section tool*/
+		var secTools = $(".sectools");
+
+		/*----------------------------
+		This is to open the section tool by 
+		clicking the head section
+		----------------------------*/
+		for(var i = 0; i < headSec.length; i++) {
+			$(headSec[i]).click(function() {
+
+				var n = headSecA.indexOf(this);
+
+				$(secTools[n]).css("height", "auto");
+				openIndicator[n].setAttribute("src", "img/closeUp.png");
+
+				setTimeout(function() {
+
+					$(closeIndicator[n]).css("display", "block");
+					$(openIndicator[n]).css("display", "none");
+
+				}, 100);
+
+			});
+		}
+
+		/*----------------------------
+		This is to open the section tool by 
+		clicking the open indicator
+		----------------------------*/
+		for(var i = 0; i < openIndicator.length; i++) {
+			$(openIndicator[i]).click(function() {
+
+				var n = openIndicatorA.indexOf(this);
+
+				$(secTools[n]).css("height", "auto");
+				openIndicator[n].setAttribute("src", "img/closeUp.png");
+
+				setTimeout(function() {
+
+					$(closeIndicator[n]).css("display", "block");
+					$(openIndicator[n]).css("display", "none");
+
+				}, 100);
+
+			});
+		}
+
+		/*----------------------------
+		This is to close the section tool by 
+		clicking the close indicator
+		----------------------------*/
+		for(var i = 0; i < closeIndicator.length; i++) {
+			$(closeIndicator[i]).click(function() {
+
+				var n = closeIndicatorA.indexOf(this);
+
+				$(secTools[n]).css("height", "3em");
+				closeIndicator[n].setAttribute("src", "img/open.png");
+
+				setTimeout(function() {
+
+					$(openIndicator[n]).css("display", "block");
+					$(closeIndicator[n]).css("display", "none");
+
+				}, 100);
+
+			});
+		}
+
+		/*----------------------------
+		This is to close the section tool by 
+		clicking the close div
+		----------------------------*/
+		var closeDiv = $(".close-div");
+		var closeDivA = new Array();
+
+		fillArray(closeDivA, closeDiv);
+
+		for(var i = 0; i < closeDiv.length; i++) {
+			$(closeDiv[i]).click(function() {
+
+				var n = closeDivA.indexOf(this);
+
+				$(secTools[n]).css("height", "3em");
+				closeIndicator[n].setAttribute("src", "img/open.png");
+
+				setTimeout(function() {
+
+					$(openIndicator[n]).css("display", "block");
+					$(closeIndicator[n]).css("display", "none");
+
+				}, 100);
+
+			});
+		}
+
 		/*This will open different tools in the editor*/
 		/*These are the tools*/
 		var tools = $(".tools");
@@ -201,163 +320,270 @@ if(winW > winH) {
 			});
 		}
 
-	}
+		/*---------------------------------
+		---------------------------------
+		This will be the background tools
+		---------------------------------
+		---------------------------------*/
+		var sel = $("#selection");
+		var backCol = $("#backcolorsel");
+		var backImg = $("#backimgsel");
 
-	/*---------------------------------
-	---------------------------------
-	This will open the individual section
-	---------------------------------
-	---------------------------------*/
-	/*This is the head section variable*/
-	var headSec = $(".head-section");
-	var headSecA = new Array();
+		$(backCol).click(function() {
 
-	fillArray(headSecA, headSec);
-
-	/*This is open indicator*/
-	var openIndicator = $(".open-indicator");
-	var openIndicatorA = new Array();
-
-	fillArray(openIndicatorA, openIndicator);
-
-	/*This is the close indicator*/
-	var closeIndicator = $(".close-indicator");
-	var closeIndicatorA = new Array();
-
-	fillArray(closeIndicatorA, closeIndicator);
-
-	/*This is the section tool*/
-	var secTools = $(".sectools");
-
-	/*----------------------------
-	This is to open the section tool by 
-	clicking the head section
-	----------------------------*/
-	for(var i = 0; i < headSec.length; i++) {
-		$(headSec[i]).click(function() {
-
-			var n = headSecA.indexOf(this);
-
-			$(secTools[n]).css("height", "auto");
-			openIndicator[n].setAttribute("src", "img/closeUp.png");
+			$(this).css("margin-left", "-45vw");
 
 			setTimeout(function() {
 
-				$(closeIndicator[n]).css("display", "block");
-				$(openIndicator[n]).css("display", "none");
+				$(backImg).css("margin-left", "-45vw");
+				$(sel).css("height", "36vw");
 
 			}, 100);
 
 		});
-	}
 
-	/*----------------------------
-	This is to open the section tool by 
-	clicking the open indicator
-	----------------------------*/
-	for(var i = 0; i < openIndicator.length; i++) {
-		$(openIndicator[i]).click(function() {
+		$(backImg).click(function() {
 
-			var n = openIndicatorA.indexOf(this);
-
-			$(secTools[n]).css("height", "auto");
-			openIndicator[n].setAttribute("src", "img/closeUp.png");
+			$(this).css("margin-left", "-45vw");
+			$("#img-select").css("display", "block");
 
 			setTimeout(function() {
 
-				$(closeIndicator[n]).css("display", "block");
-				$(openIndicator[n]).css("display", "none");
+				$(backCol).css("margin-left", "-45vw");
+				$(sel).css("height", "36vw");
 
 			}, 100);
 
 		});
-	}
 
-	/*----------------------------
-	This is to close the section tool by 
-	clicking the close indicator
-	----------------------------*/
-	for(var i = 0; i < closeIndicator.length; i++) {
-		$(closeIndicator[i]).click(function() {
+		/*---------------------------------
+		---------------------------------
+		This will be the title tools
+		---------------------------------
+		---------------------------------*/
+		/*These are the tools to used to save options*/
+		var timeArray = new Array();
+		var sizeArray = new Array();
+		var titlePreview = $("#title-preview").children();
+		/*This will get what is type in the title editor*/
+		$("#title-changer").keyup(function() {
 
-			var n = closeIndicatorA.indexOf(this);
-
-			$(secTools[n]).css("height", "3em");
-			closeIndicator[n].setAttribute("src", "img/open.png");
-
-			setTimeout(function() {
-
-				$(openIndicator[n]).css("display", "block");
-				$(closeIndicator[n]).css("display", "none");
-
-			}, 100);
+			titlePreview[0].innerHTML = $("#title-changer").val();
 
 		});
-	}
 
-	/*----------------------------
-	This is to close the section tool by 
-	clicking the close div
-	----------------------------*/
-	var closeDiv = $(".close-div");
-	var closeDivA = new Array();
+		/*This will test the onchange function on the font change*/
+		$("#font-up-change").click(function() {
 
-	fillArray(closeDivA, closeDiv);
+			var fontS = document.getElementById("font-pre").innerHTML;
+			var fontSI = parseInt(fontS);
+			fontSI++;
 
-	for(var i = 0; i < closeDiv.length; i++) {
-		$(closeDiv[i]).click(function() {
+			timeArray.push(new Date());
+			sizeArray.push(fontSI);
+			
 
-			var n = closeDivA.indexOf(this);
+			if(fontSI < 41) {
 
-			$(secTools[n]).css("height", "3em");
-			closeIndicator[n].setAttribute("src", "img/open.png");
+				document.getElementById("font-pre").innerHTML = fontSI;
+				var titlePre = $("#title-preview").children();
+				$(titlePre[0]).css("font-size", fontSI + "px");
 
-			setTimeout(function() {
+				if(timeArray.length > 1) {
 
-				$(openIndicator[n]).css("display", "block");
-				$(closeIndicator[n]).css("display", "none");
+					if(timeArray[timeArray.length - 2] < timeArray[timeArray.length - 1]) {
 
-			}, 100);
+						console.log("The font size has been changed to: " + sizeArray[timeArray.length - 1] + " and the time changes was " + timeArray[timeArray.length - 1]);
+
+					}
+
+				} else {
+
+					console.log("The font size has been changed to: " + sizeArray[0] + " and was changed at this time " + timeArray[0]);
+
+				}
+
+			}
 
 		});
+
+		$("#font-down-change").click(function() {
+
+			var fontS = document.getElementById("font-pre").innerHTML;
+			var fontSI = parseInt(fontS);
+			fontSI--;
+
+			timeArray.push(new Date());
+			sizeArray.push(fontSI);
+
+			if(fontSI > 9) {
+
+				document.getElementById("font-pre").innerHTML = fontSI;
+				var titlePre = $("#title-preview").children();
+				$(titlePre[0]).css("font-size", fontSI + "px");
+
+				if(timeArray.length > 1) {
+
+					if(timeArray[timeArray.length - 2] < timeArray[timeArray.length - 1]) {
+
+						console.log("The font size has been changed to: " + sizeArray[timeArray.length - 1] + " and the time changes was " + timeArray[timeArray.length - 1]);
+
+					}
+
+				} else {
+
+					console.log("The font size has been changed to: " + sizeArray[0] + " and was changed at this time " + timeArray[0]);
+
+				}
+
+			}
+
+		});
+
+		/*--------------------------------
+		-------------------
+		This will get rid of the border
+		-------------------
+		--------------------------------*/
+		$("#no-border").click(function() {
+
+			$(this).css("background-color", "#484848");
+			$(this).css("color", "#f3f3f3");
+
+			$("#border-button").css("background-color", "transparent");
+			$("#border-button").css("color", "#484848");
+			$(titlePreview[0]).css("border", "none");
+			$("#border-options").css("display", "none");
+
+
+		});
+
+		$("#border-button").click(function() {
+
+			$(this).css("background-color", "#484848");
+			$(this).css("color", "#f3f3f3");
+
+			$("#no-border").css("background-color", "transparent");
+			$("#no-border").css("color", "#484848");
+			$(titlePreview[0]).css("border", "3px solid #fff");
+			$("#border-options").css("display", "block");
+
+		});
+
+		/*This will move the thickness scroller up and down*/
+		var size = $(".sizes");
+
+		//This changes the thickness of the line up
+		$("#up").click(function() {
+
+			var inBorderTop = $("#in-border-size").css("margin-top");
+			var inBorderTopP = parseInt(inBorderTop);
+
+			if(inBorderTopP == 0) {
+
+				$("#in-border-size").css("margin-top", "-3.1em");
+				$(titlePreview[0]).css("border", size[1].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -49) {
+
+				$("#in-border-size").css("margin-top", "-6.3em");
+				$(titlePreview[0]).css("border", size[2].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -100) {
+
+				$("#in-border-size").css("margin-top", "-9.5em");
+				$(titlePreview[0]).css("border", size[3].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -152) {
+
+				$("#in-border-size").css("margin-top", "-12.6em");
+				$(titlePreview[0]).css("border", size[4].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -201) {
+
+				$("#in-border-size").css("margin-top", "-15.7em");
+				$(titlePreview[0]).css("border", size[5].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -251) {
+
+				$("#in-border-size").css("margin-top", "-18.8em");
+				$(titlePreview[0]).css("border", size[6].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -300) {
+
+				$("#in-border-size").css("margin-top", "-22em");
+				$(titlePreview[0]).css("border", size[7].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -352) {
+
+				$("#in-border-size").css("margin-top", "-25.1em");
+				$(titlePreview[0]).css("border", size[8].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -401) {
+
+				$("#in-border-size").css("margin-top", "-28.2em");
+				$(titlePreview[0]).css("border", size[9].innerHTML + "px solid #fff");
+
+			}
+
+		});
+
+		//This changes the thicness of the line down
+		$("#down").click(function() {
+
+			var inBorderTop = $("#in-border-size").css("margin-top");
+			var inBorderTopP = parseInt(inBorderTop);
+
+			if(inBorderTopP == -451) {
+
+				$("#in-border-size").css("margin-top", "-25.1em");
+				$(titlePreview[0]).css("border", size[8].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -401) {
+
+				$("#in-border-size").css("margin-top", "-22em");
+				$(titlePreview[0]).css("border", size[7].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -352) {
+
+				$("#in-border-size").css("margin-top", "-18.8em");
+				$(titlePreview[0]).css("border", size[6].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -300) {
+
+				$("#in-border-size").css("margin-top", "-15.7em");
+				$(titlePreview[0]).css("border", size[5].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -251) {
+
+				$("#in-border-size").css("margin-top", "-12.6em");
+				$(titlePreview[0]).css("border", size[4].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -201) {
+
+				$("#in-border-size").css("margin-top", "-9.5em");
+				$(titlePreview[0]).css("border", size[3].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -152) {
+
+				$("#in-border-size").css("margin-top", "-6.3em");
+				$(titlePreview[0]).css("border", size[2].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -100) {
+
+				$("#in-border-size").css("margin-top", "-3.1em");
+				$(titlePreview[0]).css("border", size[1].innerHTML + "px solid #fff");
+
+			} else if(inBorderTopP == -49) {
+
+				$("#in-border-size").css("margin-top", "0em");
+				$(titlePreview[0]).css("border", size[0].innerHTML + "px solid #fff");
+
+			}
+
+		});
+
 	}
-
-	/*---------------------------------
-	---------------------------------
-	This will be the background tools
-	---------------------------------
-	---------------------------------*/
-	var sel = $("#selection");
-	var backCol = $("#backcolorsel");
-	var backImg = $("#backimgsel");
-
-	$(backCol).click(function() {
-
-		$(this).css("margin-left", "-45vw");
-
-		setTimeout(function() {
-
-			$(backImg).css("margin-left", "-45vw");
-			$(sel).css("height", "36vw");
-
-		}, 100);
-
-	});
-
-	$(backImg).click(function() {
-
-		$(this).css("margin-left", "-45vw");
-		$("#img-select").css("display", "block");
-
-		setTimeout(function() {
-
-			$(backCol).css("margin-left", "-45vw");
-			$(sel).css("height", "36vw");
-
-		}, 100);
-
-	});
-
 
 } else {
 
@@ -1044,6 +1270,6 @@ if(winW > winH) {
 		----------------------------------------*/
 		openEditor(open);
 	
-	} 	
+	} 
 
 }
